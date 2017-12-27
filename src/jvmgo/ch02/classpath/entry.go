@@ -11,7 +11,7 @@ type Entry interface {
 }
 //根据路径后缀创建不同类型的Entry
 func newEntry(path string) Entry{
-	if strings.Constains(path, pathListSeparator) {
+	if strings.Contains(path, pathListSeparator) {
 		return newCompositeEntry(path)
 	}
 	if strings.HasSuffix(path, "*"){
