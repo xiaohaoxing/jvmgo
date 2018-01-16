@@ -7,5 +7,5 @@ type ConstantNameAndTypeInfo struct {
 
 func (self *ConstantNameAndTypeInfo) readInfo(reader *ClassReader) {
 	self.nameIndex = reader.readUint16()
-	self.descriptorIndex = reader.readUint16()
+	self.descriptorIndex = reader.readUint16()6
 }
