@@ -1,12 +1,12 @@
 package main
 
 import "fmt"
-import "jvmgo/ch04/rtda"
+import "jvmgo/ch05/rtda"
 
 func main() {
 	cmd := parseCmd()
 	if cmd.versionFlag {
-		fmt.Println("version0.0.2")
+		fmt.Println("version0.0.5")
 	} else if cmd.helpFlag || cmd.class == "" {
 		printUsage()
 	} else {

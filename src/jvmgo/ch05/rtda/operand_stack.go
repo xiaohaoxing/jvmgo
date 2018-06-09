@@ -72,3 +72,14 @@ func (self *OperandStack) PopRef() *Object {
 	self.slots[self.size].ref = nil//让GC处理这个引用
 	return ref
 }
+
+//Cha5新增操作栈函数
+func (self *OperandStack) PushSlot(slot Slot) {
+	self.slots[self.size] = slot
+	self.size ++
+}
+
+func (self *OperandStack) PopSlot(slot Slot) {
+	self.size --
+	return self.slots[self.size]
+}
