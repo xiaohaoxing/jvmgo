@@ -85,17 +85,4 @@ func (self *Classpath) parseUserClasspath(cpOption string) {
 	}
 	self.userClasspath = newEntry(cpOption)
 }
-func (self *Classpath) ReadClass(className string) ([]byte, Entry, error) {
-	className = className + ".class"
-	if data, entry, err := self.bootClasspath.readClass(className); err == nil {
-		return data, entry, err
-	}
-	if data, entry, err := self.extClasspath.readClass(className); err == nil {
-		return data, entry, err
-	}
-	return self.userClasspath.readClass(className)
-}
-func (self *Classpath) String() string {
-	return self.userClasspath.String()
-}
 

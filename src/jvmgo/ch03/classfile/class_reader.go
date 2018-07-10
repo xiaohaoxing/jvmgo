@@ -1,7 +1,6 @@
 package classfile
 
 import "encoding/binary"
-import "fmt"
 
 type ClassReader struct {
 	data []byte
@@ -10,28 +9,28 @@ type ClassReader struct {
 func (self *ClassReader) readUint8() uint8 {
 	val := self.data[0]
 	self.data = self.data[1:]
-	fmt.Printf("read a uint8:%v\n", val)
+	//fmt.Printf("read a uint8:%v\n", val)
 	return val
 }
 
 func (self *ClassReader) readUint16() uint16 {
 	val := binary.BigEndian.Uint16(self.data)
 	self.data = self.data[2:]
-	fmt.Printf("read a uint16:%v\n", val)
+	//fmt.Printf("read a uint16:%v\n", val)
 	return val
 }
 
 func (self *ClassReader) readUint32() uint32 {
 	val := binary.BigEndian.Uint32(self.data)
 	self.data = self.data[4:]
-	fmt.Printf("read a uint32:%v\n", val)
+	//fmt.Printf("read a uint32:%v\n", val)
 	return val
 }
 
 func (self *ClassReader) readUint64() uint64 {
 	val := binary.BigEndian.Uint64(self.data)
 	self.data = self.data[8:]
-	fmt.Printf("read a uint64:%v\n", val)
+	//fmt.Printf("read a uint64:%v\n", val)
 	return val
 }
 //第一个字节表示需要读取的大小。

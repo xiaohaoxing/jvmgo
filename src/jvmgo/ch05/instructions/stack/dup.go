@@ -2,7 +2,7 @@ package stack
 
 import "jvmgo/ch05/instructions/base"
 import "jvmgo/ch05/rtda"
-
+//复制栈顶变量的操作系列
 type DUP struct { base.NoOperandsInstruction }
 type DUP_X1 struct { base.NoOperandsInstruction }
 type DUP_X2 struct { base.NoOperandsInstruction }
@@ -15,58 +15,61 @@ type DUP2_X2 struct { base.NoOperandsInstruction }
 //		c->b->a->a
 func (self *DUP) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	slot := stack.PopSlot()
-	stack.PushSlot(slot)
-	stack.PushSlot(slot)
+	a := stack.PopSlot()
+	stack.PushSlot(a)
+	stack.PushSlot(a)
 }
 
 //栈顶: c->b->a
 //
-//		c->a->b->a
+//		c->b->a->b
 func (self *DUP_X1) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	slot1 := stack.PopSlot()
-	slot2 := stack.PopSlot()
-	stack.PushSlot(slot1)
-	stack.PushSlot(slot2)
-	stack.PushSlot(slot1)
+	a := stack.PopSlot()
+	b := stack.PopSlot()
+	stack.PushSlot(b)
+	stack.PushSlot(a)
+	stack.PushSlot(b)
 }
 
 //栈顶：c->b->a
 //
-//		a->c->b->a
+//		c->b->a->c
 func (self *DUP_X2) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	slot1 := stack.PopSlot()
-	slot2 := stack.PopSlot()
-	slot3 := stack.PopSlot()
-	
+	a := stack.PopSlot()
+	b := stack.PopSlot()
+	c := stack.PopSlot()
+	stack.PushSlot(c)
+	stack.PushSlot(b)
+	stack.PushSlot(a)
+	stack.PushSlot(c)
 }
 //c->b->a
-//
+//复制2个变量，无间隔
 //c->b->a->b->a
 func (self *DUP2) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	slot1 := stack.PopSlot()
-	slot2 := stack.PopSlot()
-	stack.PushSlot(slot2)
-	stack.PushSlot(slot1)
-	stack.PushSlot(slot2)
-	stack.PushSlot(slot1)
+	a := stack.PopSlot()
+	b := stack.PopSlot()
+	stack.PushSlot(b)
+	stack.PushSlot(a)
+	stack.PushSlot(b)
+	stack.PushSlot(a)
 }
 //c->b->a
 //
-//b->a->c->b->a
+//c->b->a->c->b
 func (self *DUP2_X1) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	slot1 := stack.PopSlot()
-	slot2 := stack.PopSlot()
-	slot3 := stack.PopSlot()
-	stack.PushSlot(slot2)
-	stack.PushSlot(slot1)
-	stack.PushSlot(slot3)
-	stack.PushSlot(slot2)
-	stack.PushSlot(slot1)
+	a := stack.PopSlot()
+	b := stack.PopSlot()
+	c := stack.PopSlot()
+	stack.PushSlot(c)
+	stack.PushSlot(b)
+	stack.PushSlot(a)
+	stack.PushSlot(c)
+	stack.PushSlot(b)
 }
 
 //d->c->b->a

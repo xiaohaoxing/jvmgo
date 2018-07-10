@@ -3,7 +3,7 @@ package constants
 import "jvmgo/ch05/instructions/base"
 import "jvmgo/ch05/rtda"
 /*
-包括BIPUSH和SIPUSH2个获取byte/short型数据扩展成int并push栈顶
+包括 BIPUSH 和 SIPUSH 2个获取 byte/short 型数据扩展成 int 并 push 栈顶
 */
 type BIPUSH struct {val int8}
 
