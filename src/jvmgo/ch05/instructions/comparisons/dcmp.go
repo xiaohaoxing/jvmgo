@@ -19,7 +19,7 @@ func (self *DCMPL) Execute(frame *rtda.Frame) {
 //辅助方法，用一个 bool 标记用了哪个方法。
 //如果不能比较，2种指令得到的结果不相同。如果能比较，2种指令得到的结果一定相同。
 func _dcmp(frame *rtda.Frame, flag bool) {
-	stack := frame.OprandStack()
+	stack := frame.OperandStack()
 	var2 := stack.PopDouble()
 	var1 := stack.PopDouble()
 	if var1 > var2 {

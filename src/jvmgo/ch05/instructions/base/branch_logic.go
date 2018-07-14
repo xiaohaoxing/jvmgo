@@ -1,4 +1,4 @@
-pakcage base
+package base
 
 import "jvmgo/ch05/rtda"
 //设置下一个指令的位置

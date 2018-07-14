@@ -22,5 +22,5 @@ func (self *LOR) Execute(frame *rtda.Frame) {
 	var2 := stack.PopLong()
 	var1 := stack.PopLong()
 	result := var1 | var2
-	stack.PoshLong(result)
+	stack.PushLong(result)
 }

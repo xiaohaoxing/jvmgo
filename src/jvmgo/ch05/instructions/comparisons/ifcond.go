@@ -3,16 +3,16 @@ package comparisons
 import "jvmgo/ch05/instructions/base"
 import "jvmgo/ch05/rtda"
 
-type IFEQ struct { base.NoOperandsInstruction }
+type IFEQ struct { base.BranchInstruction }
 
-func (self *INEQ) Execute(frame *rtda.Frame) {
+func (self *IFEQ) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
 	if val == 0 {
 		base.Branch(frame, self.Offset)
 	}
 }
 
-type IFNE struct { base.NoOperandsInstruction }
+type IFNE struct { base.BranchInstruction }
 
 func (self *IFNE) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
@@ -21,7 +21,7 @@ func (self *IFNE) Execute(frame *rtda.Frame) {
 	}
 }
 
-type IFLT struct { base.NoOperandsInstruction }
+type IFLT struct { base.BranchInstruction }
 
 func (self *IFLT) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
@@ -30,7 +30,7 @@ func (self *IFLT) Execute(frame *rtda.Frame) {
 	}
 }
 
-type IFLE struct { base.NoOperandsInstruction }
+type IFLE struct { base.BranchInstruction }
 
 func (self *IFLE) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
@@ -39,7 +39,7 @@ func (self *IFLE) Execute(frame *rtda.Frame) {
 	}
 }
 
-type IFGT struct { base.NoOperandsInstruction }
+type IFGT struct { base.BranchInstruction }
 
 func (self *IFGT) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
@@ -48,7 +48,7 @@ func (self *IFGT) Execute(frame *rtda.Frame) {
 	}
 }
 
-type IFGE struct { base.NoOperandsInstruction }
+type IFGE struct { base.BranchInstruction }
  
 func (self *IFGE) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()

@@ -32,14 +32,14 @@ func (self *ISUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	var2 := stack.PopInt()
 	var1 := stack.PopInt()
-	result = var2 - var1
+	result := var2 - var1
 	stack.PushInt(result)
 }
 
 //long 类型的减法
 type LSUB struct{ base.NoOperandsInstruction }
 
-func (self *LSUB) Execute(frame rtda.Frame) {
+func (self *LSUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	var2 := stack.PopLong()
 	var1 := stack.PopLong()
