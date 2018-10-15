@@ -1,90 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c8e0c58-c1b0-44d2-b655-c8a19269fb73" name="Default" comment="Finish ch6.">
-      <change afterPath="$PROJECT_DIR$/bin/test/MyObject.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/MyObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/constants/ldc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/checkcast.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/getfield.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/getstatic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/instanceof.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/invokespecial.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/invokevirtual.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/new.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/putfield.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/putstatic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/class_hierarchy.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/class_loader.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/cp_fieldref.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/cp_interface_methodref.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/cp_methodref.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/slots.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ch01.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ch02.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ch03.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ch04.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch05/instructions/base/instruction.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch05/instructions/base/instruction.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/classfile/class_reader.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/classfile/class_reader.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/classfile/cp_numeric.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/classfile/cp_numeric.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/classfile/member_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/classfile/member_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/base/branch_logic.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/base/branch_logic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/base/instruction.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/base/instruction.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/dcmp.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/dcmp.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/fcmp.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/fcmp.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/if_acmp.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/if_acmp.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/if_icmp.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/if_icmp.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/ifcond.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/ifcond.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/lcmp.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/comparisons/lcmp.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/constants/const.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/constants/const.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/constants/ipush.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/constants/ipush.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/constants/nop.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/constants/nop.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/control/goto.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/control/goto.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/control/lookupswitch.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/control/lookupswitch.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/control/tableswitch.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/control/tableswitch.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/conversions/d2x.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/conversions/d2x.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/conversions/f2x.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/conversions/f2x.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/conversions/i2x.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/conversions/i2x.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/conversions/l2x.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/conversions/l2x.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/extended/goto_w.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/extended/goto_w.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/extended/ifnull.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/extended/ifnull.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/extended/wide.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/extended/wide.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/factory.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/factory.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/loads/aload.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/loads/aload.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/loads/dload.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/loads/dload.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/loads/fload.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/loads/fload.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/loads/iload.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/loads/iload.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/loads/lload.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/loads/lload.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/add.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/add.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/and.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/and.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/div.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/div.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/iinc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/iinc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/mul.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/mul.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/neg.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/neg.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/or.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/or.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/rem.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/rem.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/sh.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/sh.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/sub.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/sub.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/xor.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/math/xor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stack/dup.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stack/dup.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stack/pop.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stack/pop.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stack/swap.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stack/swap.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/astore.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/astore.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/dstore.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/dstore.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/fstore.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/fstore.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/istore.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/istore.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/lstore.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/lstore.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/interpreter.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/interpreter.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/frame.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/frame.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/class.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/class.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/object.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/object.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/local_vars.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/local_vars.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/thread.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch06/rtda/thread.go" afterDir="false" />
-    </list>
+    <list default="true" id="8c8e0c58-c1b0-44d2-b655-c8a19269fb73" name="Default" comment="Finish ch6." />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,11 +10,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jvmgo/ch06/instructions/factory.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="-7252">
               <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch06/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+              <folding>
+                <element signature="e#14#132#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/class_loader.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="87" column="37" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
+              <folding>
+                <element signature="e#14#79#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -129,7 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/istore.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stores/lstore.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stack/dup.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch06/instructions/stack/pop.go" />
@@ -180,6 +129,7 @@
         <option value="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/invokevirtual.go" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch06/instructions/factory.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/class_loader.go" />
       </list>
     </option>
   </component>
@@ -387,7 +337,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="76" y="23" width="1604" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20294495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -401,10 +350,10 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.498779" weight="0.32959184" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49743918" weight="0.3187166" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5012804" side_tool="true" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49679896" visible="true" weight="0.3187166" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.503201" side_tool="true" visible="true" weight="0.3187166" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4987196" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4987196" weight="0.32941177" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -485,16 +434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="2336" selection-start-line="2336" selection-end-line="2336" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/class_loader.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="e#14#79#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -605,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/cp_methodref.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -661,16 +593,6 @@
     <entry file="file://$PROJECT_DIR$/src/jvmgo/ch06/instructions/constants/nop.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch06/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#14#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jvmgo/ch06/interpreter.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -719,8 +641,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jvmgo/ch06/instructions/factory.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="-7252">
           <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch06/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="e#14#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch06/rtda/heap/class_loader.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="87" column="37" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
+          <folding>
+            <element signature="e#14#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
         </state>
       </provider>
     </entry>
