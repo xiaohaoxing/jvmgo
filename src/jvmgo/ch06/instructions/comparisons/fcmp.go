@@ -1,16 +1,16 @@
 package comparisons
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
 //比较 float 指令1:FCMPG
-type FCMPG struct { base.NoOperandsInstruction }
+type FCMPG struct{ base.NoOperandsInstruction }
 
 func (self *FCMPG) Execute(frame *rtda.Frame) {
 	_fcmp(frame, true)
 }
 
-type FCMPL struct { base.NoOperandsInstruction }
+type FCMPL struct{ base.NoOperandsInstruction }
 
 func (self *FCMPL) Execute(frame *rtda.Frame) {
 	_fcmp(frame, false)
@@ -24,13 +24,13 @@ func _fcmp(frame *rtda.Frame, flag bool) {
 	var1 := stack.PopFloat()
 	if var1 > var2 {
 		stack.PushInt(1)
-	}else if var1 == var2 {
+	} else if var1 == var2 {
 		stack.PushInt(0)
-	}else if var1 < var2 {
+	} else if var1 < var2 {
 		stack.PushInt(-1)
-	}else if flag {
+	} else if flag {
 		stack.PushInt(1)
-	}else {
+	} else {
 		stack.PushInt(-1)
 	}
 }

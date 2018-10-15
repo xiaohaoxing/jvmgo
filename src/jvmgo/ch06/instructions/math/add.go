@@ -1,12 +1,12 @@
 package math
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
 //double 类型的 add
 type DADD struct{ base.NoOperandsInstruction }
 
-func (self *DADD) Execute(frame *rtda.Frame){
+func (self *DADD) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	var1 := stack.PopDouble()
 	var2 := stack.PopDouble()
@@ -17,7 +17,7 @@ func (self *DADD) Execute(frame *rtda.Frame){
 //float 类型的 add
 type FADD struct{ base.NoOperandsInstruction }
 
-func (self *FADD) Execute(frame *rtda.Frame){
+func (self *FADD) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	var1 := stack.PopFloat()
 	var2 := stack.PopFloat()
@@ -37,7 +37,7 @@ func (self *IADD) Execute(frame *rtda.Frame) {
 }
 
 //long 类型的 add
-type LADD struct { base.NoOperandsInstruction }
+type LADD struct{ base.NoOperandsInstruction }
 
 func (self *LADD) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()

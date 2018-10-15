@@ -1,12 +1,12 @@
 package math
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
 //double 类型的乘法
 type DMUL struct{ base.NoOperandsInstruction }
 
-func (self *DMUL) Execute(frame *rtda.Frame){
+func (self *DMUL) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	var2 := stack.PopDouble()
 	var1 := stack.PopDouble()
@@ -15,9 +15,9 @@ func (self *DMUL) Execute(frame *rtda.Frame){
 }
 
 //float 类型的乘法
-type FMUL struct { base.NoOperandsInstruction }
+type FMUL struct{ base.NoOperandsInstruction }
 
-func (self *FMUL) Execute(frame *rtda.Frame){
+func (self *FMUL) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	var2 := stack.PopFloat()
 	var1 := stack.PopFloat()
@@ -28,7 +28,7 @@ func (self *FMUL) Execute(frame *rtda.Frame){
 //int 类型的乘法
 type IMUL struct{ base.NoOperandsInstruction }
 
-func (self *IMUL) Execute(frame *rtda.Frame){
+func (self *IMUL) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	var2 := stack.PopInt()
 	var1 := stack.PopInt()

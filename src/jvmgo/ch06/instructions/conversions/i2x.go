@@ -1,12 +1,13 @@
 package conversions
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
+
 /*
 相比较 double 和 float，int 多了转化为 byte, char, short
 */
 //int->byte
-type I2B struct { base.NoOperandsInstruction }
+type I2B struct{ base.NoOperandsInstruction }
 
 func (self *I2B) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -16,7 +17,7 @@ func (self *I2B) Execute(frame *rtda.Frame) {
 }
 
 //int->char
-type I2C struct { base.NoOperandsInstruction }
+type I2C struct{ base.NoOperandsInstruction }
 
 func (self *I2C) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -26,7 +27,7 @@ func (self *I2C) Execute(frame *rtda.Frame) {
 }
 
 //int->short
-type I2S struct { base.NoOperandsInstruction }
+type I2S struct{ base.NoOperandsInstruction }
 
 func (self *I2S) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -36,7 +37,7 @@ func (self *I2S) Execute(frame *rtda.Frame) {
 }
 
 //int->double
-type I2D struct { base.NoOperandsInstruction }
+type I2D struct{ base.NoOperandsInstruction }
 
 func (self *I2D) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -46,7 +47,7 @@ func (self *I2D) Execute(frame *rtda.Frame) {
 }
 
 //int->float
-type I2F struct { base.NoOperandsInstruction }
+type I2F struct{ base.NoOperandsInstruction }
 
 func (self *I2F) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -56,11 +57,11 @@ func (self *I2F) Execute(frame *rtda.Frame) {
 }
 
 //int->long
-type I2L struct { base.NoOperandsInstruction }
+type I2L struct{ base.NoOperandsInstruction }
 
 func (self *I2L) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	i := stack.PopInt()
 	l := int64(i)
-	stack.PushLong(l)	
+	stack.PushLong(l)
 }

@@ -1,10 +1,10 @@
 package math
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
 //double 的取反
-type DNEG struct { base.NoOperandsInstruction }
+type DNEG struct{ base.NoOperandsInstruction }
 
 func (self *DNEG) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -13,7 +13,7 @@ func (self *DNEG) Execute(frame *rtda.Frame) {
 }
 
 //float 的取反
-type FNEG struct { base.NoOperandsInstruction }
+type FNEG struct{ base.NoOperandsInstruction }
 
 func (self *FNEG) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -22,7 +22,7 @@ func (self *FNEG) Execute(frame *rtda.Frame) {
 }
 
 //int 的取反
-type INEG struct { base.NoOperandsInstruction }
+type INEG struct{ base.NoOperandsInstruction }
 
 func (self *INEG) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -31,7 +31,7 @@ func (self *INEG) Execute(frame *rtda.Frame) {
 }
 
 //long 的取反
-type LNEG struct { base.NoOperandsInstruction }
+type LNEG struct{ base.NoOperandsInstruction }
 
 func (self *LNEG) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()

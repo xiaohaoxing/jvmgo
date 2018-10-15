@@ -1,13 +1,13 @@
 package math
 
 import "math"
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
-type DREM struct { base.NoOperandsInstruction }
-type FREM struct { base.NoOperandsInstruction }
-type IREM struct { base.NoOperandsInstruction }
-type LREM struct { base.NoOperandsInstruction }
+type DREM struct{ base.NoOperandsInstruction }
+type FREM struct{ base.NoOperandsInstruction }
+type IREM struct{ base.NoOperandsInstruction }
+type LREM struct{ base.NoOperandsInstruction }
 
 //int类型取余操作
 func (self *IREM) Execute(frame *rtda.Frame) {
@@ -20,6 +20,7 @@ func (self *IREM) Execute(frame *rtda.Frame) {
 	result := v1 % v2
 	stack.PushInt(result)
 }
+
 //long类型取余操作
 func (self *LREM) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()

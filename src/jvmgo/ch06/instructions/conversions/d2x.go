@@ -1,9 +1,10 @@
 package conversions
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
+
 //double->int
-type D2I struct {base.NoOperandsInstruction }
+type D2I struct{ base.NoOperandsInstruction }
 
 func (self *D2I) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -13,7 +14,7 @@ func (self *D2I) Execute(frame *rtda.Frame) {
 }
 
 //double->float
-type D2F struct { base.NoOperandsInstruction }
+type D2F struct{ base.NoOperandsInstruction }
 
 func (self *D2F) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -23,7 +24,7 @@ func (self *D2F) Execute(frame *rtda.Frame) {
 }
 
 //double->long
-type D2L struct { base.NoOperandsInstruction }
+type D2L struct{ base.NoOperandsInstruction }
 
 func (self *D2L) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()

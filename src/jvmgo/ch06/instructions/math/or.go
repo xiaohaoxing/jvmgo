@@ -1,10 +1,10 @@
 package math
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
 //int 类型的或运算
-type IOR struct { base.NoOperandsInstruction }
+type IOR struct{ base.NoOperandsInstruction }
 
 func (self *IOR) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -15,7 +15,7 @@ func (self *IOR) Execute(frame *rtda.Frame) {
 }
 
 //long 类型的或运算
-type LOR struct { base.NoOperandsInstruction }
+type LOR struct{ base.NoOperandsInstruction }
 
 func (self *LOR) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()

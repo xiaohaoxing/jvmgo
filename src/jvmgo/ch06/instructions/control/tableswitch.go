@@ -1,21 +1,22 @@
 package control
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
 type TABLE_SWITCH struct {
 	defaultOffset int32
-	low int32
-	high int32
-	jumpOffsets []int32
+	low           int32
+	high          int32
+	jumpOffsets   []int32
 }
+
 //如果在 low 和 high 之间，就修改offset为操作数 offset，否则 offset 设置为default 值
 func (self *TABLE_SWITCH) Execute(frame *rtda.Frame) {
 	index := frame.OperandStack().PopInt()
 	var offset int
 	if index >= self.low && index <= self.high {
 		offset = int(self.jumpOffsets[index-self.low])
-	}else {
+	} else {
 		offset = int(self.defaultOffset)
 	}
 	base.Branch(frame, offset)

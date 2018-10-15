@@ -1,9 +1,9 @@
 package math
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
-type IAND struct { base.NoOperandsInstruction }
+type IAND struct{ base.NoOperandsInstruction }
 
 func (self *IAND) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -13,7 +13,7 @@ func (self *IAND) Execute(frame *rtda.Frame) {
 	stack.PushInt(result)
 }
 
-type LAND struct { base.NoOperandsInstruction }
+type LAND struct{ base.NoOperandsInstruction }
 
 func (self *LAND) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()

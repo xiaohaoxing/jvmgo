@@ -1,11 +1,12 @@
 package extended
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
 type GOTO_W struct {
 	offset int
 }
+
 func (self *GOTO_W) FetchOperands(reader *base.BytecodeReader) {
 	self.offset = int(reader.ReadInt32())
 }

@@ -1,10 +1,10 @@
 package math
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
 //double 类型的减法
-type DSUB struct { base.NoOperandsInstruction }
+type DSUB struct{ base.NoOperandsInstruction }
 
 func (self *DSUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -15,7 +15,7 @@ func (self *DSUB) Execute(frame *rtda.Frame) {
 }
 
 //float 类型的减法
-type FSUB struct { base.NoOperandsInstruction }
+type FSUB struct{ base.NoOperandsInstruction }
 
 func (self *FSUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()

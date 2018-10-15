@@ -1,7 +1,8 @@
 package math
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
+
 //给局部变量表中一个变量增加一个常量值。
 type IINC struct {
 	Index uint

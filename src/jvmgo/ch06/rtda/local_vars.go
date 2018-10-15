@@ -1,7 +1,8 @@
 package rtda
 
 import "math"
-import "jvmgp/ch06/rtda/heap"
+import "jvmgo/ch06/rtda/heap"
+
 //定义局部变量表，每个成员包含整数和引用2种数据类型。
 type LocalVars []Slot
 
@@ -32,14 +33,15 @@ func (self LocalVars) GetFloat(index uint) float32 {
 
 func (self LocalVars) SetLong(index uint, val int64) {
 	self[index].num = int32(val)
-	self[index + 1].num = int32(val>>32)
+	self[index+1].num = int32(val >> 32)
 }
 
 func (self LocalVars) GetLong(index uint) int64 {
 	low := uint32(self[index].num)
-	high := uint32(self[index + 1].num)
-	return int64(high) << 32 | int64(low)
+	high := uint32(self[index+1].num)
+	return int64(high)<<32 | int64(low)
 }
+
 //double可以转化为long处理
 func (self LocalVars) SetDouble(index uint, val float64) {
 	bits := math.Float64bits(val)

@@ -1,10 +1,10 @@
 package math
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
 //double 类型的除法
-type DDIV struct { base.NoOperandsInstruction }
+type DDIV struct{ base.NoOperandsInstruction }
 
 func (self *DDIV) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -15,7 +15,7 @@ func (self *DDIV) Execute(frame *rtda.Frame) {
 }
 
 //float 类型的除法
-type FDIV struct { base.NoOperandsInstruction }
+type FDIV struct{ base.NoOperandsInstruction }
 
 func (self *FDIV) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -40,7 +40,7 @@ func (self *IDIV) Execute(frame *rtda.Frame) {
 }
 
 //long 类型的除法
-type LDIV struct { base.NoOperandsInstruction }
+type LDIV struct{ base.NoOperandsInstruction }
 
 func (self *LDIV) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()

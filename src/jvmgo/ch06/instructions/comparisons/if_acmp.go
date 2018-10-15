@@ -1,9 +1,9 @@
 package comparisons
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
-type IF_ACMPEQ struct { base.BranchInstruction }
+type IF_ACMPEQ struct{ base.BranchInstruction }
 
 func (self *IF_ACMPEQ) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -14,7 +14,7 @@ func (self *IF_ACMPEQ) Execute(frame *rtda.Frame) {
 	}
 }
 
-type IF_ACMPNE struct { base.BranchInstruction }
+type IF_ACMPNE struct{ base.BranchInstruction }
 
 func (self *IF_ACMPNE) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
@@ -24,4 +24,3 @@ func (self *IF_ACMPNE) Execute(frame *rtda.Frame) {
 		base.Branch(frame, self.Offset)
 	}
 }
-

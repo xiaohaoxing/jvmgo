@@ -1,11 +1,11 @@
 package classfile
 
 type MemberInfo struct {
-	cp ConstantPool
-	accessFlags uint16
-	nameIndex uint16
+	cp              ConstantPool
+	accessFlags     uint16
+	nameIndex       uint16
 	descriptorIndex uint16
-	attributes []AttributeInfo
+	attributes      []AttributeInfo
 }
 
 func readMembers(reader *ClassReader, cp ConstantPool) []*MemberInfo {
@@ -16,20 +16,22 @@ func readMembers(reader *ClassReader, cp ConstantPool) []*MemberInfo {
 	}
 	return members
 }
+
 //读取一个字段或者方法数据
 func readMember(reader *ClassReader, cp ConstantPool) *MemberInfo {
 	return &MemberInfo{
-		cp : cp,
-		accessFlags : reader.readUint16(),
-		nameIndex : reader.readUint16(),
-		descriptorIndex : reader.readUint16(),
-		attributes : readAttributes(reader, cp),
+		cp:              cp,
+		accessFlags:     reader.readUint16(),
+		nameIndex:       reader.readUint16(),
+		descriptorIndex: reader.readUint16(),
+		attributes:      readAttributes(reader, cp),
 	}
 }
 
 func (self *MemberInfo) AccessFlags() uint16 {
 	return self.accessFlags
 }
+
 //name和descriptor需要根据index在常量池中找
 func (self *MemberInfo) Name() string {
 	return self.cp.getUtf8(self.nameIndex)
@@ -44,6 +46,16 @@ func (self *MemberInfo) CodeAttribute() *CodeAttribute {
 		switch attrInfo.(type) {
 		case *CodeAttribute:
 			return attrInfo.(*CodeAttribute)
+		}
+	}
+	return nil
+}
+
+func (self *MemberInfo) ConstantValueAttribute() *ConstantValueAttribute {
+	for _, attrInfo := range self.attributes {
+		switch attrInfo.(type) {
+		case *ConstantValueAttribute:
+			return attrInfo.(*ConstantValueAttribute)
 		}
 	}
 	return nil

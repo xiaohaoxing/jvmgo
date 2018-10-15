@@ -1,16 +1,17 @@
 package comparisons
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
 //比较 double 指令1:DCMPG
-type DCMPG struct { base.NoOperandsInstruction }
+type DCMPG struct{ base.NoOperandsInstruction }
 
 func (self *DCMPG) Execute(frame *rtda.Frame) {
 	_dcmp(frame, true)
 }
+
 //比较 double 指令2:DCMPL
-type DCMPL struct { base.NoOperandsInstruction }
+type DCMPL struct{ base.NoOperandsInstruction }
 
 func (self *DCMPL) Execute(frame *rtda.Frame) {
 	_dcmp(frame, false)
@@ -24,13 +25,13 @@ func _dcmp(frame *rtda.Frame, flag bool) {
 	var1 := stack.PopDouble()
 	if var1 > var2 {
 		stack.PushInt(1)
-	}else if var1 == var2 {
+	} else if var1 == var2 {
 		stack.PushInt(0)
-	}else if var1 < var2 {
+	} else if var1 < var2 {
 		stack.PushInt(-1)
-	}else if flag {
+	} else if flag {
 		stack.PushInt(1)
-	}else {
+	} else {
 		stack.PushInt(-1)
 	}
 }

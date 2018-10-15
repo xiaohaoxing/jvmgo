@@ -1,9 +1,9 @@
 package extended
 
-import "jvmgo/ch05/instructions/base"
-import "jvmgo/ch05/rtda"
+import "jvmgo/ch06/instructions/base"
+import "jvmgo/ch06/rtda"
 
-type IFNULL struct { base.BranchInstruction }
+type IFNULL struct{ base.BranchInstruction }
 
 func (self *IFNULL) Execute(frame *rtda.Frame) {
 	ref := frame.OperandStack().PopRef()
@@ -12,7 +12,7 @@ func (self *IFNULL) Execute(frame *rtda.Frame) {
 	}
 }
 
-type IFNONNULL struct { base.BranchInstruction }
+type IFNONNULL struct{ base.BranchInstruction }
 
 func (self *IFNONNULL) Execute(frame *rtda.Frame) {
 	ref := frame.OperandStack().PopRef()
