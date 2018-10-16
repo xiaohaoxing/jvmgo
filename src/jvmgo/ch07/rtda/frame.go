@@ -49,3 +49,8 @@ func (self *Frame) NextPC() int {
 func (self *Frame) SetNextPC(nextPC int) {
 	self.nextPC = nextPC
 }
+
+// 重置下一条指令，由于类初始化会终止当前指令，因此需要重置当前指令
+func (self *Frame) RevertNextPC() {
+	self.nextPC = self.thread.pc
+}

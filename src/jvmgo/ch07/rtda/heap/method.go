@@ -65,6 +65,10 @@ func (self *Method) IsStatic() bool {
 	return 0 != self.ClassMember.AccessFlags()&ACC_STATIC
 }
 
+func (self *Method) IsNative() bool {
+	return 0 != self.ClassMember.AccessFlags()&ACC_NATIVE
+}
+
 func (self *Method) Code() []byte {
 	return self.code
 }

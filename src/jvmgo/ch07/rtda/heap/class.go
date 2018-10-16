@@ -19,6 +19,7 @@ type Class struct {
 	instanceSlotCount uint
 	staticSlotCount   uint
 	staticVars        Slots
+	initStarted       bool
 }
 
 /*
@@ -34,6 +35,7 @@ func newClass(cf *classfile.ClassFile) *Class {
 	class.constantPool = newConstantPool(class, cf.ConstantPool())
 	class.fields = newFields(class, cf.Fields())
 	class.methods = newMethods(class, cf.Methods())
+
 	return class
 }
 
@@ -83,6 +85,14 @@ func (self *Class) StaticVars() Slots {
 	return self.staticVars
 }
 
+func (self *Class) InitStarted() bool {
+	return self.initStarted
+}
+
+func (self *Class) StartInit() {
+	self.initStarted = true
+}
+
 /*
 可访问性，要么是 public，要么是同一个包的类。（类不存在 private，所有类最低是包访问性）
 */
@@ -108,10 +118,17 @@ func (self *Class) NewObject() *Object {
 	return newObject(self)
 }
 
+// 获取程序入口函数
 func (self *Class) GetMainMethod() *Method {
 	return self.getStaticMethod("main", "([Ljava/lang/String;)V")
 }
 
+// 获取类初始化方法
+func (self *Class) GetClinitMethod() *Method {
+	return self.getStaticMethod("<clinit>", "()V")
+}
+
+// 获取指定函数名称和参数，返回值的方法
 func (self *Class) getStaticMethod(name, desp string) *Method {
 	for _, method := range self.methods {
 		if method.IsStatic() && method.name == name && method.descriptor == desp {

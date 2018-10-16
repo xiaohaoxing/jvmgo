@@ -19,11 +19,16 @@ func (self *NEW) Execute(frame *rtda.Frame) {
 	classRef := cp.GetConstant(self.Index).(*heap.ClassRef)
 	//解析成 class 对象
 	class := classRef.ResolvedClass()
+	if !class.InitStarted() {
+		frame.RevertNextPC()
+		base.InitClass(frame.Thread(), class)
+		return
+	}
 	//抽象类和接口不能实例化
 	if class.IsInterface() || class.IsAbstract() {
 		panic("java.lang.InstantiationError!")
 	}
-	//TODO 实例化过程(暂时仅仅用 Object 对象)，第七章会详解
+
 	ref := class.NewObject()
 	//作为操作数推入栈中
 	frame.OperandStack().PushRef(ref)
