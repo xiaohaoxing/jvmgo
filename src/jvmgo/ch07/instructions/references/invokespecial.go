@@ -25,7 +25,7 @@ func (self *INVOKE_SPECIAL) Execute(frame *rtda.Frame) {
 	}
 
 	// 弹出的是 this 引用，GetRefFromTop 传递的参数是取第几个参数，但是不会弹出元素
-	ref := frame.OperandStack().GetRefFromTop(resolvedMethod.ArgSlotCount())
+	ref := frame.OperandStack().GetRefFromTop(resolvedMethod.ArgSlotCount() - 1)
 	if ref == nil {
 		panic("java.lang.NullPointerException")
 	}

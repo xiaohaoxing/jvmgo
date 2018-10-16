@@ -43,11 +43,12 @@ func loop(thread *rtda.Thread, logInst bool) {
 		inst.FetchOperands(reader)
 		//设置下一个指令
 		frame.SetNextPC(reader.PC())
+		// 从命令行过来的，是否记录指令
 		if logInst {
 			logInstruction(frame, inst)
 		}
 		//执行:execute
-		fmt.Printf("pc:%2d inst:%T %v\n", pc, inst, inst)
+		//fmt.Printf("pc:%2d inst:%T %v\n", pc, inst, inst)
 		inst.Execute(frame)
 		if thread.IsStackEmpty() {
 			break

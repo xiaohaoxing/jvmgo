@@ -10,7 +10,7 @@ func (self *DSUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	var2 := stack.PopDouble()
 	var1 := stack.PopDouble()
-	result := var2 - var1
+	result := var1 - var2
 	stack.PushDouble(result)
 }
 
@@ -21,7 +21,7 @@ func (self *FSUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	var2 := stack.PopFloat()
 	var1 := stack.PopFloat()
-	result := var2 - var1
+	result := var1 - var2
 	stack.PushFloat(result)
 }
 
@@ -32,7 +32,7 @@ func (self *ISUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	var2 := stack.PopInt()
 	var1 := stack.PopInt()
-	result := var2 - var1
+	result := var1 - var2
 	stack.PushInt(result)
 }
 
@@ -43,6 +43,6 @@ func (self *LSUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	var2 := stack.PopLong()
 	var1 := stack.PopLong()
-	result := var2 - var1
+	result := var1 - var2
 	stack.PushLong(result)
 }
