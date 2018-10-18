@@ -2,9 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/github.com/knocknote/vitess-sqlparser" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/knocknote/vitess-sqlparser" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/src/test/github.com/knocknote/vitess-sqlparser" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/src/test/vitess-sqlparser" vcs="Git" />
   </component>
 </project>

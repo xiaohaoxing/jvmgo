@@ -40,7 +40,7 @@ func (self *ClassLoader) loadArrayClass(name string) *Class {
 		superClass:  self.LoadClass("java/lang/Object"),
 		interfaces: []*Class{
 			self.LoadClass("java/lang/Cloneable"),
-			self.LoadClass("java/io/serializable"),
+			self.LoadClass("java/io/Serializable"),
 		},
 	}
 	self.classMap[name] = class
@@ -184,7 +184,9 @@ func initStaticFinalVar(class *Class, field *Field) {
 			val := cp.GetConstant(cpIndex).(float64)
 			vars.SetDouble(slotId, val)
 		case "Ljava/lang/String": //字符串常量
-			panic("todo in ch08")
+			goStr := cp.GetConstant(cpIndex).(string)
+			jStr := JString(class.Loader(), goStr)
+			vars.SetRef(slotId, jStr)
 		}
 	}
 }

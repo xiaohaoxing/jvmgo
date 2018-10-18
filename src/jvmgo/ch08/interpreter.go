@@ -11,10 +11,13 @@ import "jvmgo/ch08/rtda"
 //执行一个方法。按顺序读取attr，local 变量，操作数栈，方法的字节码。
 //初始化各个成员
 //循环执行字节码
-func interpret(method *heap.Method, logInst bool) {
+func interpret(method *heap.Method, logInst bool, args []string) {
 	thread := rtda.NewThread()
 	frame := thread.NewFrame(method)
 	thread.PushFrame(frame)
+	// 把命令行参数转化成 Java 字符串数组
+	jArgs := createArgsArray(method.Class().Loader(), args)
+	frame.LocalVars().SetRef(0, jArgs)
 
 	defer catchErr(thread)
 	loop(thread, logInst)
@@ -72,4 +75,14 @@ func logInstruction(frame *rtda.Frame, inst base.Instruction) {
 	methodName := method.Name()
 	pc := frame.Thread().PC()
 	fmt.Printf("%v.%v{} #%2d %T %v\n", className, methodName, pc, inst, inst)
+}
+
+func createArgsArray(loader *heap.ClassLoader, args []string) *heap.Object {
+	stringClass := loader.LoadClass("java/lang/String")
+	argsArr := stringClass.ArrayClass().NewArray(uint(len(args)))
+	jArgs := argsArr.Refs()
+	for i, arg := range args {
+		jArgs[i] = heap.JString(loader, arg)
+	}
+	return argsArr
 }

@@ -6,9 +6,6 @@ import (
 	"jvmgo/ch07/rtda/heap"
 )
 
-/*
-只用来创建类的实例，数组的实例化有其他指令（？） // TODO
-*/
 //NEW 指令
 type NEW struct{ base.Index16Instruction }
 

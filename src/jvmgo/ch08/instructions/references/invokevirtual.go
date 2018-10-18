@@ -63,6 +63,11 @@ func _println(stack *rtda.OperandStack, descriptor string) {
 		fmt.Printf("%v\n", stack.PopFloat())
 	case "(D)V":
 		fmt.Printf("%v\n", stack.PopDouble())
+	case "(Ljava/lang/String;)V":
+		// TODO hack！还不是用的本地方法
+		jStr := stack.PopRef()
+		goStr := heap.GoString(jStr)
+		fmt.Println(goStr)
 	default:
 		panic("println: " + descriptor)
 	}

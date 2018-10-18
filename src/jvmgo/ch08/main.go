@@ -20,9 +20,6 @@ func main() {
 }
 
 func startJVM(cmd *Cmd) {
-	// frame := rtda.NewFrame(100, 100)
-	// testLocalVars(frame.LocalVars())
-	// testOperandStack(frame.OperandStack())
 	cp := classpath.Parse(cmd.XjreOption, cmd.cpOption)
 	classLoader := heap.NewClassLoader(cp, cmd.verboseClassFlag)
 
@@ -30,7 +27,7 @@ func startJVM(cmd *Cmd) {
 	mainClass := classLoader.LoadClass(className)
 	mainMethod := mainClass.GetMainMethod()
 	if mainMethod != nil {
-		interpret(mainMethod, cmd.verboseInstFlag)
+		interpret(mainMethod, cmd.verboseInstFlag, cmd.args)
 	} else {
 		fmt.Printf("Main method not found in class %s\n", cmd.class)
 	}

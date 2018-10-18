@@ -22,8 +22,6 @@ func (self *PUT_STATIC) Execute(frame *rtda.Frame) {
 	field := fieldRef.ResolvedField()
 	//得到该静态成员的类，可能这个类还没初始化（当前类的父类或者接口等）
 	class := field.Class()
-	//TODO 初始化class 对应的类
-
 	//通过类访问对象成员：运行时错误！
 	//如：
 	// class Apple{int weight;}
