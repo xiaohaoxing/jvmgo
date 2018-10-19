@@ -13,21 +13,31 @@ type ClassLoader struct {
 }
 
 func NewClassLoader(cp *classpath.Classpath, verboseFlag bool) *ClassLoader {
-	return &ClassLoader{
+	loader := &ClassLoader{
 		cp:          cp,
 		verboseFlag: verboseFlag,
 		classMap:    make(map[string]*Class),
 	}
+	loader.LoadBasicClasses()
+	loader.LoadPrimitiveClasses()
+	return loader
 }
 
 func (self *ClassLoader) LoadClass(name string) *Class {
 	if class, ok := self.classMap[name]; ok {
 		return class //已经加载了
 	}
+	var class *Class
 	if name[0] == '[' {
-		return self.loadArrayClass(name)
+		class = self.loadArrayClass(name)
+	} else {
+		class = self.loadNonArrayClass(name)
 	}
-	return self.loadNonArrayClass(name) //调用非数组类
+	if jlClassClass, ok := self.classMap["java/lang/Class"]; ok {
+		class.jClass = jlClassClass.NewObject()
+		class.jClass.extra = class
+	}
+	return class
 }
 
 //加载一个数组类
@@ -189,4 +199,34 @@ func initStaticFinalVar(class *Class, field *Field) {
 			vars.SetRef(slotId, jStr)
 		}
 	}
+}
+
+func (self *ClassLoader) LoadBasicClasses() {
+	jlClassClass := self.LoadClass("java/lang/Class")
+	for _, class := range self.classMap {
+		if class.jClass == nil {
+			class.jClass = jlClassClass.NewObject()
+			class.jClass.extra = class
+		}
+	}
+}
+
+func (self *ClassLoader) LoadPrimitiveClasses() {
+	for primitiveType, _ := range primitiveTypes {
+		// 加载 void， int， float 等
+		self.loadPrimitiveClass(primitiveType)
+	}
+}
+
+// 加载基本类型，基本类型没有超类也没有接口
+func (self *ClassLoader) loadPrimitiveClass(className string) {
+	class := &Class{
+		accessFlags: ACC_PUBLIC,
+		name:        className,
+		loader:      self,
+		initStarted: true,
+	}
+	class.jClass = self.classMap["java/lang/Class"].NewObject()
+	class.jClass.extra = class
+	self.classMap[className] = class
 }

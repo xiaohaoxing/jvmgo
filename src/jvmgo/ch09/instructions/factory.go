@@ -11,6 +11,7 @@ import (
 	. "jvmgo/ch09/instructions/loads"
 	. "jvmgo/ch09/instructions/math"
 	. "jvmgo/ch09/instructions/references"
+	. "jvmgo/ch09/instructions/reserved"
 	. "jvmgo/ch09/instructions/stack"
 	. "jvmgo/ch09/instructions/stores"
 )
@@ -210,6 +211,8 @@ var (
 	ifnull           = &IFNULL{}
 	ifnonnull        = &IFNONNULL{}
 	goto_w           = &GOTO_W{}
+
+	invoke_native = &INVOKE_NATIVE{}
 )
 
 func NewInstruction(opcode byte) base.Instruction {
@@ -612,7 +615,8 @@ func NewInstruction(opcode byte) base.Instruction {
 		return goto_w
 	// case 0xc9: return &JSR_W{}
 	// case 0xca: breakpoint
-	// case 0xfe: return impdep1
+	case 0xfe:
+		return invoke_native
 	// case 0xff: return impdep2
 	default:
 		panic(fmt.Errorf("Unsupported opcode: 0x%x!", opcode))
