@@ -5,10 +5,7 @@
     <option name="CUSTOM_SCOPE_NAME" value="ch09" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c8e0c58-c1b0-44d2-b655-c8a19269fb73" name="Default" comment="✅ 完成9.4&#10;⚠️ 还没有测试通过！准备先 pull 第八章的代码查看写错的地方和遗漏的部分。">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8c8e0c58-c1b0-44d2-b655-c8a19269fb73" name="Default" comment="✅ 完成9.4&#10;⚠️ 还没有测试通过！准备先 pull 第八章的代码查看写错的地方和遗漏的部分。" />
     <ignored mask="*.a" />
     <ignored path="src/github.com/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
