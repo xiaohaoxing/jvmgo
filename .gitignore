@@ -16,3 +16,6 @@ bin/*
 
 # ignore the libraries
 src/github.com/*
+
+# ignore the mac cache file
+.DS_Store
