@@ -1,5 +1,25 @@
 package heap
 
+var primitiveTypes = map[string]string{
+	"void":    "V",
+	"boolean": "Z",
+	"byte":    "B",
+	"short":   "S",
+	"int":     "I",
+	"long":    "J",
+	"char":    "C",
+	"float":   "F",
+	"double":  "D",
+}
+
+func getComponentClassName(className string) string {
+	if className[0] == '[' {
+		componentTypeDescriptor := className[1:]
+		return toClassName(componentTypeDescriptor)
+	}
+	panic("Not array: " + className)
+}
+
 func getArrayClassName(className string) string {
 	return "[" + toDescriptor(className)
 }
@@ -12,26 +32,6 @@ func toDescriptor(className string) string {
 		return d
 	}
 	return "L" + className + ";"
-}
-
-var primitiveTypes = map[string]string{
-	"void":    "V",
-	"boolean": "Z",
-	"byte":    "B",
-	"short":   "S",
-	"int":     "I",
-	"long":    "L",
-	"char":    "C",
-	"float":   "F",
-	"double":  "D",
-}
-
-func getComponentClassName(className string) string {
-	if className[0] == '[' {
-		componentTypeDescriptor := className[1:]
-		return toClassName(componentTypeDescriptor)
-	}
-	panic("Not array: " + className)
 }
 
 //从类描述中得到类名

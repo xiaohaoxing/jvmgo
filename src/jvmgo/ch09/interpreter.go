@@ -23,6 +23,18 @@ func interpret(method *heap.Method, logInst bool, args []string) {
 	loop(thread, logInst)
 }
 
+
+func createArgsArray(loader *heap.ClassLoader, args []string) *heap.Object {
+	stringClass := loader.LoadClass("java/lang/String")
+	argsArr := stringClass.ArrayClass().NewArray(uint(len(args)))
+	jArgs := argsArr.Refs()
+	for i, arg := range args {
+		jArgs[i] = heap.JString(loader, arg)
+	}
+	return argsArr
+}
+
+
 func catchErr(thread *rtda.Thread) {
 	if r := recover(); r != nil {
 		logFrames(thread)
@@ -74,15 +86,5 @@ func logInstruction(frame *rtda.Frame, inst base.Instruction) {
 	className := method.Class().Name()
 	methodName := method.Name()
 	pc := frame.Thread().PC()
-	fmt.Printf("%v.%v{} #%2d %T %v\n", className, methodName, pc, inst, inst)
-}
-
-func createArgsArray(loader *heap.ClassLoader, args []string) *heap.Object {
-	stringClass := loader.LoadClass("java/lang/String")
-	argsArr := stringClass.ArrayClass().NewArray(uint(len(args)))
-	jArgs := argsArr.Refs()
-	for i, arg := range args {
-		jArgs[i] = heap.JString(loader, arg)
-	}
-	return argsArr
+	fmt.Printf("%v.%v() #%2d %T %v\n", className, methodName, pc, inst, inst)
 }

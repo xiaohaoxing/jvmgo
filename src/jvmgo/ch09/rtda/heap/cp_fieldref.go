@@ -29,10 +29,10 @@ func (self *FieldRef) resolveFieldRef() {
 	c := self.ResolvedClass()
 	field := lookupField(c, self.name, self.descriptor)
 	if field == nil {
-		panic("java.lang.NoSuchFieldError!")
+		panic("java.lang.NoSuchFieldError")
 	}
 	if !field.isAccessibleTo(d) {
-		panic("java.lang.IllegalAccessError!")
+		panic("java.lang.IllegalAccessError")
 	}
 	self.field = field
 }

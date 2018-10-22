@@ -34,13 +34,13 @@ func (self *PUT_STATIC) Execute(frame *rtda.Frame) {
 	// Apple.weight = 10
 	//就会抛出异常。
 	if !field.IsStatic() {
-		panic("java.lang.IncompatibleClassChangeError!")
+		panic("java.lang.IncompatibleClassChangeError")
 	}
 	//final 修饰的对象成员变量只能在该类的构造函数中赋值，否则抛出异常！
 	//"<clinit>"：编译器生成的初始化方法的名字
 	if field.IsFinal() {
 		if currentClass != class || currentMethod.Name() != "<clinit>" {
-			panic("java.lang.IllegalAccessError!")
+			panic("java.lang.IllegalAccessError")
 		}
 	}
 	//根据描述符得到类型，从栈中弹出操作数并赋值给局部变量表对应的变量
@@ -57,7 +57,7 @@ func (self *PUT_STATIC) Execute(frame *rtda.Frame) {
 		slots.SetDouble(slotId, stack.PopDouble())
 	case 'J':
 		slots.SetLong(slotId, stack.PopLong())
-	case 'L':
+	case 'L', '[':
 		slots.SetRef(slotId, stack.PopRef())
 	}
 }

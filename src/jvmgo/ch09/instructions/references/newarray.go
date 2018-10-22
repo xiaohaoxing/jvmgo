@@ -8,7 +8,7 @@ import (
 
 const (
 	AT_BOOLEAN = 4
-	AT_CHAT    = 5
+	AT_CHAR    = 5
 	AT_FLOAT   = 6
 	AT_DOUBLE  = 7
 	AT_BYTE    = 8
@@ -44,7 +44,7 @@ func getPrimitiveArrayClass(loader *heap.ClassLoader, atype uint8) *heap.Class {
 		return loader.LoadClass("[Z")
 	case AT_BYTE:
 		return loader.LoadClass("[B")
-	case AT_CHAT:
+	case AT_CHAR:
 		return loader.LoadClass("[C")
 	case AT_SHORT:
 		return loader.LoadClass("[S")

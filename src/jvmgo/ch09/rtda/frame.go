@@ -20,14 +20,6 @@ func newFrame(thread *Thread, method *heap.Method) *Frame {
 	}
 }
 
-//func newFrame(thread *Thread, maxLocals, maxStack uint) *Frame {
-//	return &Frame {
-//		thread: thread,
-//		localVars: newLocalVars(maxLocals),
-//		operandStack: newOperandStack(maxStack),
-//	}
-//}
-
 func (self *Frame) LocalVars() LocalVars {
 	return self.localVars
 }

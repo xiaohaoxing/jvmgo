@@ -23,7 +23,7 @@ func (self *NEW) Execute(frame *rtda.Frame) {
 	}
 	//抽象类和接口不能实例化
 	if class.IsInterface() || class.IsAbstract() {
-		panic("java.lang.InstantiationError!")
+		panic("java.lang.InstantiationError")
 	}
 
 	ref := class.NewObject()

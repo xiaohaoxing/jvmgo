@@ -20,6 +20,7 @@ func (self *INVOKE_VIRTUAL) Execute(frame *rtda.Frame) {
 	ref := frame.OperandStack().GetRefFromTop(resolvedMethod.ArgSlotCount() - 1)
 	if ref == nil {
 		// 对 System.out.println()做处理
+		// hack 方法
 		if methodRef.Name() == "println" {
 			_println(frame.OperandStack(), methodRef.Descriptor())
 			return
@@ -45,10 +46,11 @@ func (self *INVOKE_VIRTUAL) Execute(frame *rtda.Frame) {
 
 }
 
+// 还是 hack 方法！
 func _println(stack *rtda.OperandStack, descriptor string) {
 	switch descriptor {
 	case "(Z)V":
-		fmt.Printf("%V\n", stack.PopInt() != 0)
+		fmt.Printf("%v\n", stack.PopInt() != 0)
 	case "(C)V":
 		fmt.Printf("%c\n", stack.PopInt())
 	case "(B)V":

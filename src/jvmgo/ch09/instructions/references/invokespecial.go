@@ -45,5 +45,9 @@ func (self *INVOKE_SPECIAL) Execute(frame *rtda.Frame) {
 		resolvedMethod.Name() != "<init>" {
 		methodToBeInvoked = heap.LookupMethodInClass(currentClass.SuperClass(), methodRef.Name(), methodRef.Descriptor())
 	}
+	// 验证方法是否抽象
+	if methodToBeInvoked == nil || methodToBeInvoked.IsAbstract() {
+		panic("java.lang.AbstractMethodError")
+	}
 	base.InvokeMethod(frame, methodToBeInvoked)
 }

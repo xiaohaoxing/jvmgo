@@ -22,7 +22,7 @@ func (self *GET_STATIC) Execute(frame *rtda.Frame) {
 	}
 	//非静态成员不能通过类访问！
 	if !field.IsStatic() {
-		panic("java.lang.IncompatibleClassChangeError!")
+		panic("java.lang.IncompatibleClassChangeError")
 	}
 	//读取的时候不需要管是不是 final 的了
 	descriptor := field.Descriptor()

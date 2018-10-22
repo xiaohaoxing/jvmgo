@@ -17,7 +17,7 @@ func (self *SymRef) resolveClassRef() {
 	d := self.cp.class
 	c := d.loader.LoadClass(self.className)
 	if !c.isAccessibleTo(d) {
-		panic("java.lang.IllegalAccessError!")
+		panic("java.lang.IllegalAccessError")
 	}
 	self.class = c
 }

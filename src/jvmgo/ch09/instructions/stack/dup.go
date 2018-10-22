@@ -28,9 +28,9 @@ func (self *DUP_X1) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	a := stack.PopSlot()
 	b := stack.PopSlot()
-	stack.PushSlot(b)
 	stack.PushSlot(a)
 	stack.PushSlot(b)
+	stack.PushSlot(a)
 }
 
 //栈顶：c->b->a
@@ -41,10 +41,10 @@ func (self *DUP_X2) Execute(frame *rtda.Frame) {
 	a := stack.PopSlot()
 	b := stack.PopSlot()
 	c := stack.PopSlot()
+	stack.PushSlot(a)
 	stack.PushSlot(c)
 	stack.PushSlot(b)
 	stack.PushSlot(a)
-	stack.PushSlot(c)
 }
 
 //c->b->a
@@ -68,11 +68,11 @@ func (self *DUP2_X1) Execute(frame *rtda.Frame) {
 	a := stack.PopSlot()
 	b := stack.PopSlot()
 	c := stack.PopSlot()
-	stack.PushSlot(c)
 	stack.PushSlot(b)
 	stack.PushSlot(a)
 	stack.PushSlot(c)
 	stack.PushSlot(b)
+	stack.PushSlot(a)
 }
 
 //d->c->b->a

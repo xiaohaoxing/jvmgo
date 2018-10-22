@@ -6,10 +6,116 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c8e0c58-c1b0-44d2-b655-c8a19269fb73" name="Default" comment="✅ 完成9.4&#10;⚠️ 还没有测试通过！准备先 pull 第八章的代码查看写错的地方和遗漏的部分。">
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/bytes2.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/hack.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/sqlparser.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/sqltypes.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/ast.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/model.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/mysql.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/sessionctx/stmtctx.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/terror.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/types.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/types/json.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/util/auth.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/util/charset.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/util/chunk.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/util/format.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/util/hack.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/dependency/util/memory.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/parser.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/tidbparser/parser/opcode.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/github.com/juju/errors.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/encoding.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/encoding/charmap.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/encoding/internal.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/encoding/internal/identifier.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/encoding/japanese.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/encoding/korean.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/encoding/simplifiedchinese.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/encoding/traditionalchinese.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/encoding/unicode.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/internal/utf8internal.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/runes.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/github.com/knocknote/vitess-sqlparser/vendor/golang.org/x/text/transform.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/classfile.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/classpath.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions/base.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions/comparisons.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions/constants.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions/control.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions/conversions.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions/extended.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions/loads.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions/math.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions/references.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions/stack.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/instructions/stores.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/rtda.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch06/rtda/heap.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/classfile.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/classpath.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions/base.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions/comparisons.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions/constants.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions/control.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions/conversions.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions/extended.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions/loads.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions/math.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions/references.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions/stack.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/instructions/stores.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/rtda.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch07/rtda/heap.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/classfile.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/classpath.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions/base.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions/comparisons.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions/constants.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions/control.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions/conversions.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions/extended.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions/loads.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions/math.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions/references.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions/stack.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/instructions/stores.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/rtda.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch08/rtda/heap.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/classfile.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/classpath.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/base.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/comparisons.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/constants.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/control.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/conversions.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/extended.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/loads.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/math.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/references.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/reserved.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/stack.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/instructions/stores.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/native.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/native/java/lang.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/rtda.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/darwin_amd64/jvmgo/ch09/rtda/heap.a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch08/classfile/attr_bootstrap_methods.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch08/classfile/attr_enclosing_method.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch08/classfile/attr_inner_classes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch08/classfile/attr_local_variable_type_table.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch08/classfile/attr_signature.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch09/GetClassTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jvmgo/ch09/StringTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/BubbleSortTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/ClassFileTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/FibonacciTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/FibonacciTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch07/FibonacciTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/FibonacciTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/GaussTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/HelloWorld.java" beforeDir="false" />
@@ -97,7 +203,7 @@
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/invokespecial.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/invokespecial.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/invokestatic.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/invokestatic.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/invokevirtual.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/invokevirtual.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/multinewarray.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/multinewarray.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/multianewarray.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/new.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/new.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/newarray.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/newarray.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/putfield.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/putfield.go" afterDir="false" />
@@ -142,6 +248,44 @@
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch08/rtda/thread.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch08/rtda/thread.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_code.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_code.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_line_number_table.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_line_number_table.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_unparsed.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_unparsed.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attribute_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attribute_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/class_file.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/class_file.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/constant_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/constant_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/cp_string.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/cp_string.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/cp_utf8.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/classfile/cp_utf8.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/classpath/entry_zip.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/classpath/entry_zip.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/cmd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/base/class_init_logic.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/base/class_init_logic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/base/instruction.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/base/instruction.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/comparisons/if_acmp.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/comparisons/if_acmp.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/constants/ldc.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/constants/ldc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/control/return.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/control/return.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/math/rem.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/math/rem.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/math/sh.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/math/sh.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/anewarray.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/anewarray.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/getfield.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/getfield.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/getstatic.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/getstatic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/invokespecial.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/invokespecial.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/invokevirtual.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/invokevirtual.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/new.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/new.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/newarray.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/newarray.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/putfield.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/putfield.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/putstatic.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/putstatic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/stack/dup.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/instructions/stack/dup.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/interpreter.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/interpreter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/frame.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/frame.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_hierarchy.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_hierarchy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_member.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_member.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_name_helper.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_name_helper.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_fieldref.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_fieldref.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_methodref.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_methodref.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_symref.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_symref.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/field.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/field.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/method.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/method.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/jvm_stack.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/jvmgo/ch09/rtda/jvm_stack.go" afterDir="false" />
     </list>
     <ignored mask="*.a" />
     <ignored path="src/github.com/" />
@@ -155,90 +299,91 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/interpreter.go">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#14#151#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="3850">
+              <caret line="178" selection-start-line="178" selection-end-line="178" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/access_flags.go">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_hierarchy.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+            <state relative-caret-position="660">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/instructions/math/add.go">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_member.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="902">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/instructions/loads/aload.go">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_name_helper.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="748">
+              <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/instructions/math/and.go">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/anewarray.go">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_fieldref.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            <state relative-caret-position="412">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/array_class.go">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_methodref.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="440">
+              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_code.go">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_symref.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="418">
+              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/field.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/jvm_stack.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_line_number_table.go">
+        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/method.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/arraylength.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="448">
+              <caret line="118" column="1" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -275,49 +420,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/new.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/array_object.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch07/instructions/references/new.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch07/instructions/constants/ldc.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/new.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/putstatic.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch06/instructions/references/invokespecial.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch06/instructions/constants/ldc.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/newarray.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/anewarray.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/arraylength.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/instructions/stores/xastore.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/multinewarray.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/array_class.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/class_name_helper.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/instructions/stores/astore.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/instructions/factory.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/class_hierarchy.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/instructions/loads/xaload.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/class.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/instructions/constants/ldc.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/class_loader.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/main.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/interpreter.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/object.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/string_pool.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/HelloWorld.java" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/invokevirtual.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/base/method_invoke_logic.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/method.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/object.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_loader.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/constants/ldc.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/local_vars.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/Class.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/operand_stack.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/reserved/invokenative.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/Object.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch09/native/registry.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/array_class.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/factory.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/System.go" />
-        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/Float.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/Double.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/String.go" />
@@ -326,6 +432,45 @@
         <option value="$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/access_flags.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_code.go" />
         <option value="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_line_number_table.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_unparsed.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/classfile/attribute_info.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/classfile/class_file.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/classfile/constant_info.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/classfile/cp_string.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/classfile/cp_utf8.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/classpath/entry_zip.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/cmd.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/base/class_init_logic.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/base/instruction.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/comparisons/if_acmp.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/constants/ldc.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/control/return.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/math/rem.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/math/sh.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/anewarray.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/getfield.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/getstatic.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/invokespecial.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/invokevirtual.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/new.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/newarray.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/putfield.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/putstatic.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/stack/dup.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/instructions/stores/astore.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/interpreter.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/main.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/frame.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_hierarchy.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_member.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_name_helper.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_fieldref.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_methodref.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_symref.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/field.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/jvm_stack.go" />
+        <option value="$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/method.go" />
       </list>
     </option>
   </component>
@@ -333,7 +478,7 @@
     <scope name="ch09" pattern="file[code]:src/jvmgo/ch09/*" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="77" />
+    <option name="x" value="-1843" />
     <option name="y" value="23" />
     <option name="width" value="1843" />
     <option name="height" value="1057" />
@@ -347,7 +492,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -379,7 +523,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
               <item name="ch09" type="462c0819:PsiDirectoryNode" />
-              <item name="classfile" type="462c0819:PsiDirectoryNode" />
+              <item name="classpath" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="code" type="b2602c69:ProjectViewProjectNode" />
@@ -388,6 +532,60 @@
               <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
               <item name="ch09" type="462c0819:PsiDirectoryNode" />
               <item name="instructions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="ch09" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="ch09" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="comparisons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="ch09" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="ch09" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="control" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="ch09" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="math" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="ch09" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="references" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="code" type="b2602c69:ProjectViewProjectNode" />
@@ -397,6 +595,24 @@
               <item name="ch09" type="462c0819:PsiDirectoryNode" />
               <item name="instructions" type="462c0819:PsiDirectoryNode" />
               <item name="reserved" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="ch09" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="stack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="ch09" type="462c0819:PsiDirectoryNode" />
+              <item name="instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="stores" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="code" type="b2602c69:ProjectViewProjectNode" />
@@ -450,6 +666,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -620,14 +837,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="76" y="23" width="1604" height="1027" extended-state="6" />
+    <frame x="-1843" y="23" width="1843" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7469244" visible="true" weight="0.20742637" />
-      <window_info id="Structure" order="1" sideWeight="0.25307557" side_tool="true" visible="true" weight="0.20742637" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.74382716" visible="true" weight="0.18434203" />
+      <window_info id="Structure" order="1" sideWeight="0.25617284" side_tool="true" visible="true" weight="0.18434203" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49968052" weight="0.32941177" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4991671" visible="true" weight="0.3284974" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49167734" weight="0.27058825" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5435339" weight="0.4524064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -635,11 +852,11 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49775785" weight="0.32834226" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.5803972" weight="0.257754" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49167734" visible="true" weight="0.39144385" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50832266" side_tool="true" visible="true" weight="0.39144385" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49103713" weight="0.39144385" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50083286" side_tool="true" visible="true" weight="0.3284974" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49775785" weight="0.32941177" />
-      <window_info anchor="bottom" id="Inspection Results" order="13" sideWeight="0.4993598" weight="0.32941177" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" sideWeight="0.4987196" weight="0.32941177" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -649,6 +866,46 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -702,373 +959,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classpath/entry_zip.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#19#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classpath/entry_wildcard.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#19#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classpath/entry_dir.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#19#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classpath/entry_composite.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#19#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classpath/entry.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#19#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classpath/classpath.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#19#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/slot.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/thread.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/method.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/base/method_invoke_logic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <element signature="e#14#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_loader.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4752">
-          <caret line="220" column="23" selection-start-line="220" selection-start-column="23" selection-end-line="220" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/loads/aload.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/constants/ldc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch05/instructions/factory.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2860">
-          <caret line="140" column="19" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
-          <folding>
-            <element signature="e#22#462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch05/interpreter.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-          <folding>
-            <element signature="e#14#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/cmd.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-          <folding>
-            <element signature="e#14#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/ClassFileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/GaussTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/local_vars.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/frame.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/reserved/invokenative.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding>
-            <element signature="e#18#113#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/Class.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-          <folding>
-            <element signature="e#14#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-          <folding>
-            <element signature="e#14#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/Object.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#14#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/GetClassTest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/native/registry.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/object.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/array_class.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/factory.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="617" column="35" selection-start-line="617" selection-start-column="35" selection-end-line="617" selection-end-column="35" />
-          <folding>
-            <element signature="e#22#447#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.9.2/libexec/src/runtime/asm_amd64.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="508" selection-start-line="508" selection-end-line="508" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/operand_stack.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/constants/const.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="181" column="13" selection-start-line="181" selection-start-column="13" selection-end-line="181" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/System.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-          <folding>
-            <element signature="e#14#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/Double.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="e#14#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/Float.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding>
-            <element signature="e#14#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/native/java/lang/String.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding>
-            <element signature="e#14#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/string_pool.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/StringTest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/array_object.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="45" column="44" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/go/1.9.2/libexec/src/runtime/panic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="576" selection-start-line="576" selection-end-line="576" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/arraylength.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/interpreter.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#14#151#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/access_flags.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/instructions/math/add.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/instructions/loads/aload.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/instructions/math/and.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/instructions/references/anewarray.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jvmgo/ch08/rtda/heap/array_class.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1087,6 +977,331 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
           <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classfile/attr_unparsed.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classfile/attribute_info.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classfile/class_file.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classfile/constant_info.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1540">
+          <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/cmd.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="e#14#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/base/class_init_logic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classfile/cp_string.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classfile/cp_utf8.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classpath/entry_zip.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
+          <folding>
+            <element signature="e#19#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/classfile/member_info.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/base/method_invoke_logic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/comparisons/lcmp.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/comparisons/if_icmp.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/comparisons/if_acmp.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/constants/const.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/constants/ldc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/control/return.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/control/tableswitch.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/math/rem.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="29" column="55" lean-forward="true" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/math/sh.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/anewarray.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/getfield.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/getstatic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="24" column="53" lean-forward="true" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/base/instruction.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/newarray.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/new.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/invokevirtual.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/invokespecial.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/putfield.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/references/putstatic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="49" column="33" lean-forward="true" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/stack/pop.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/stack/dup.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/array_object.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="45" column="47" lean-forward="true" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/instructions/stores/astore.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/interpreter.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1826">
+          <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
+          <folding>
+            <element signature="e#14#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/frame.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3850">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_hierarchy.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_member.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/class_name_helper.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_fieldref.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_methodref.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/cp_symref.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/access_flags.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/field.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/jvm_stack.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jvmgo/ch09/rtda/heap/method.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="118" column="1" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,5 @@
 package classfile
 
-import "fmt"
-
 //Java虚拟机规定了14种常量
 const (
 	CONSTANT_Utf8               = 1
@@ -70,6 +68,6 @@ func newConstantInfo(tag uint8, cp ConstantPool) ConstantInfo {
 	case CONSTANT_InvokeDynamic:
 		return &ConstantInvokeDynamicInfo{}
 	default:
-		panic(fmt.Errorf("java.lang.ClassFormatError: constant pool tag:%v!", tag))
+		panic("java.lang.ClassFormatError: constant pool tag!")
 	}
 }

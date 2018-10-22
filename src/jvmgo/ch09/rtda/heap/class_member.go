@@ -27,6 +27,19 @@ func (self *ClassMember) IsProtected() bool {
 func (self *ClassMember) IsPrivate() bool {
 	return 0 != self.accessFlags&ACC_PRIVATE
 }
+
+func (self *ClassMember) IsStatic() bool {
+	return 0 != self.accessFlags&ACC_STATIC
+}
+
+func (self *ClassMember) IsFinal() bool {
+	return 0 != self.accessFlags&ACC_FINAL
+}
+
+func (self *ClassMember) IsSynthetic() bool {
+	return 0 != self.accessFlags&ACC_SYNTHETIC
+}
+
 func (self *ClassMember) AccessFlags() uint16 {
 	return self.accessFlags
 }

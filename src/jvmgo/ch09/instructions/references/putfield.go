@@ -20,12 +20,12 @@ func (self *PUT_FIELD) Execute(frame *rtda.Frame) {
 	field := fieldRef.ResolvedField()
 	//传引用，必须是非 static 的
 	if field.IsStatic() {
-		panic("java.lang.IncompatibleClassChangeError!")
+		panic("java.lang.IncompatibleClassChangeError")
 	}
 	//如果是 final 则只能在初始化方法中赋值
 	if field.IsFinal() {
 		if currentClass != field.Class() || currentMethod.Name() != "<init>" {
-			panic("java.lang.IllegalAccessError!")
+			panic("java.lang.IllegalAccessError")
 		}
 	}
 
@@ -62,7 +62,7 @@ func (self *PUT_FIELD) Execute(frame *rtda.Frame) {
 			panic("java.lang.NullPointerException")
 		}
 		ref.Fields().SetDouble(slotId, val)
-	case 'L', ',':
+	case 'L', '[':
 		val := stack.PopRef()
 		ref := stack.PopRef()
 		if ref == nil {

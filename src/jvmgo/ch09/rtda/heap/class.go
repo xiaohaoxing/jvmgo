@@ -47,6 +47,15 @@ func (self *Class) Name() string {
 func (self *Class) Loader() *ClassLoader {
 	return self.loader
 }
+
+func (self *Class) Fields() []*Field {
+	return self.fields
+}
+
+func (self *Class) Methods() []*Method {
+	return self.methods
+}
+
 func (self *Class) SuperClass() *Class {
 	return self.superClass
 }
@@ -128,19 +137,25 @@ func (self *Class) NewObject() *Object {
 
 // 获取程序入口函数
 func (self *Class) GetMainMethod() *Method {
-	return self.getStaticMethod("main", "([Ljava/lang/String;)V")
+	return self.getMethod("main", "([Ljava/lang/String;)V", true)
 }
 
 // 获取类初始化方法
 func (self *Class) GetClinitMethod() *Method {
-	return self.getStaticMethod("<clinit>", "()V")
+	return self.getMethod("<clinit>", "()V", true)
 }
 
 // 获取指定函数名称和参数，返回值的方法
-func (self *Class) getStaticMethod(name, desp string) *Method {
-	for _, method := range self.methods {
-		if method.IsStatic() && method.name == name && method.descriptor == desp {
-			return method
+// 包括 isStatic 的 Flag
+func (self *Class) getMethod(name, descriptor string, isStatic bool) *Method {
+	for c := self; c != nil; c = c.superClass {
+		for _, method := range c.methods {
+			if method.IsStatic() == isStatic &&
+				method.name == name &&
+				method.descriptor == descriptor {
+
+				return method
+			}
 		}
 	}
 	return nil
@@ -159,7 +174,7 @@ func (self *Class) isJlCloneable() bool {
 	return self.name == "java/lang/Cloneable"
 }
 func (self *Class) isJioSerializable() bool {
-	return self.name == "java/lang/Serializable"
+	return self.name == "java/io/Serializable"
 }
 
 // 从一个对象开始向父类向上找，直到找到给定的成员变量

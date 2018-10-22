@@ -14,10 +14,6 @@ func newMethodRef(cp *ConstantPool, refInfo *classfile.ConstantMethodrefInfo) *M
 	return ref
 }
 
-func (self *MethodRef) Code() []byte {
-	return self.method.Code()
-}
-
 func (self *MethodRef) Descriptor() string {
 	return self.method.Descriptor()
 }

@@ -13,6 +13,9 @@ func (self *ConstantUtf8Info) readInfo(reader *ClassReader) {
 	self.str = decodeMUTF8(bytes)
 }
 
+func (self *ConstantUtf8Info) Str() string {
+	return self.str
+}
 //完整版本的
 func decodeMUTF8(bytes []byte) string {
 	utflen := len(bytes)

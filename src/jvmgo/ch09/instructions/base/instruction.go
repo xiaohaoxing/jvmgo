@@ -6,7 +6,7 @@ import "jvmgo/ch09/rtda"
 指令的抽象类，具体实现实现其中2个方法即可
 */
 type Instruction interface {
-	FetchOperands(render *BytecodeReader)
+	FetchOperands(reader *BytecodeReader)
 	Execute(frame *rtda.Frame)
 }
 

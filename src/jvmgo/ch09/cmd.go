@@ -6,16 +6,16 @@ import "os"
 
 //加上Xjre命令行参数
 type Cmd struct {
-	helpFlag    bool
-	versionFlag bool
+	helpFlag    		bool
+	versionFlag 		bool
 	// 是否把类加载信息输出到 cmd
-	verboseClassFlag bool
+	verboseClassFlag 	bool
 	// 是否把指令加载信息输出到 cmd
-	verboseInstFlag bool
-	cpOption        string
-	XjreOption      string
-	class           string
-	args            []string
+	verboseInstFlag 	bool
+	cpOption        	string
+	XjreOption      	string
+	class           	string
+	args            	[]string
 }
 
 func parseCmd() *Cmd {

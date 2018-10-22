@@ -21,10 +21,10 @@ type ISHR struct{ base.NoOperandsInstruction }
 func (self *ISHR) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopInt()
-	v1 := stack.PopLong()
-	s := uint32(v2) & 0x3f
+	v1 := stack.PopInt()
+	s := uint32(v2) & 0x1f
 	result := v1 >> s
-	stack.PushLong(result)
+	stack.PushInt(result)
 }
 
 //int >>>
