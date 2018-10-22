@@ -3,6 +3,7 @@ package extended
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
+// Branch if reference is null
 type IFNULL struct{ base.BranchInstruction }
 
 func (self *IFNULL) Execute(frame *rtda.Frame) {
@@ -12,6 +13,7 @@ func (self *IFNULL) Execute(frame *rtda.Frame) {
 	}
 }
 
+// Branch if reference not null
 type IFNONNULL struct{ base.BranchInstruction }
 
 func (self *IFNONNULL) Execute(frame *rtda.Frame) {

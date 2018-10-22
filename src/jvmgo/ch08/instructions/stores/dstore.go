@@ -3,11 +3,11 @@ package stores
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//store long into local variable
+// Store double into local variable
 type DSTORE struct{ base.Index8Instruction }
 
 func (self *DSTORE) Execute(frame *rtda.Frame) {
-	_dstore(frame, self.Index)
+	_dstore(frame, uint(self.Index))
 }
 
 type DSTORE_0 struct{ base.NoOperandsInstruction }
@@ -34,7 +34,6 @@ func (self *DSTORE_3) Execute(frame *rtda.Frame) {
 	_dstore(frame, 3)
 }
 
-//公用函数
 func _dstore(frame *rtda.Frame, index uint) {
 	val := frame.OperandStack().PopDouble()
 	frame.LocalVars().SetDouble(index, val)

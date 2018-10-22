@@ -3,11 +3,11 @@ package stores
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//store long into local variable
+// Store reference into local variable
 type ASTORE struct{ base.Index8Instruction }
 
 func (self *ASTORE) Execute(frame *rtda.Frame) {
-	_astore(frame, self.Index)
+	_astore(frame, uint(self.Index))
 }
 
 type ASTORE_0 struct{ base.NoOperandsInstruction }
@@ -34,8 +34,7 @@ func (self *ASTORE_3) Execute(frame *rtda.Frame) {
 	_astore(frame, 3)
 }
 
-//公用函数
 func _astore(frame *rtda.Frame, index uint) {
-	val := frame.OperandStack().PopRef()
-	frame.LocalVars().SetRef(index, val)
+	ref := frame.OperandStack().PopRef()
+	frame.LocalVars().SetRef(index, ref)
 }

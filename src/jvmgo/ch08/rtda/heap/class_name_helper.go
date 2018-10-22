@@ -1,31 +1,27 @@
 package heap
 
-func getArrayClassName(className string) string {
-	return "[" + toDescriptor(className)
-}
-
-func toDescriptor(className string) string {
-	if className[0] == '[' {
-		return className
-	}
-	if d, ok := primitiveTypes[className]; ok {
-		return d
-	}
-	return "L" + className + ";"
-}
-
 var primitiveTypes = map[string]string{
 	"void":    "V",
 	"boolean": "Z",
 	"byte":    "B",
 	"short":   "S",
 	"int":     "I",
-	"long":    "L",
+	"long":    "J",
 	"char":    "C",
 	"float":   "F",
 	"double":  "D",
 }
 
+// [XXX -> [[XXX
+// int -> [I
+// XXX -> [LXXX;
+func getArrayClassName(className string) string {
+	return "[" + toDescriptor(className)
+}
+
+// [[XXX -> [XXX
+// [LXXX; -> XXX
+// [I -> int
 func getComponentClassName(className string) string {
 	if className[0] == '[' {
 		componentTypeDescriptor := className[1:]
@@ -34,19 +30,37 @@ func getComponentClassName(className string) string {
 	panic("Not array: " + className)
 }
 
-//从类描述中得到类名
+// [XXX => [XXX
+// int  => I
+// XXX  => LXXX;
+func toDescriptor(className string) string {
+	if className[0] == '[' {
+		// array
+		return className
+	}
+	if d, ok := primitiveTypes[className]; ok {
+		// primitive
+		return d
+	}
+	// object
+	return "L" + className + ";"
+}
+
+// [XXX  => [XXX
+// LXXX; => XXX
+// I     => int
 func toClassName(descriptor string) string {
-	// a array：去掉前面的括号就是类名
 	if descriptor[0] == '[' {
+		// array
 		return descriptor
 	}
-	// object：去掉前面的 L 和最后的分号就是类名
 	if descriptor[0] == 'L' {
+		// object
 		return descriptor[1 : len(descriptor)-1]
 	}
-	// 从基本类型的关系中找到类名
 	for className, d := range primitiveTypes {
 		if d == descriptor {
+			// primitive
 			return className
 		}
 	}

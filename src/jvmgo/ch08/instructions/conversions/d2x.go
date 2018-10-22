@@ -3,17 +3,7 @@ package conversions
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//double->int
-type D2I struct{ base.NoOperandsInstruction }
-
-func (self *D2I) Execute(frame *rtda.Frame) {
-	stack := frame.OperandStack()
-	d := stack.PopDouble()
-	i := int32(d)
-	stack.PushInt(i)
-}
-
-//double->float
+// Convert double to float
 type D2F struct{ base.NoOperandsInstruction }
 
 func (self *D2F) Execute(frame *rtda.Frame) {
@@ -23,7 +13,17 @@ func (self *D2F) Execute(frame *rtda.Frame) {
 	stack.PushFloat(f)
 }
 
-//double->long
+// Convert double to int
+type D2I struct{ base.NoOperandsInstruction }
+
+func (self *D2I) Execute(frame *rtda.Frame) {
+	stack := frame.OperandStack()
+	d := stack.PopDouble()
+	i := int32(d)
+	stack.PushInt(i)
+}
+
+// Convert double to long
 type D2L struct{ base.NoOperandsInstruction }
 
 func (self *D2L) Execute(frame *rtda.Frame) {

@@ -3,6 +3,7 @@ package extended
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
+// Branch always (wide index)
 type GOTO_W struct {
 	offset int
 }

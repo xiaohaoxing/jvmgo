@@ -3,7 +3,7 @@ package stores
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//store int into local variable
+// Store int into local variable
 type ISTORE struct{ base.Index8Instruction }
 
 func (self *ISTORE) Execute(frame *rtda.Frame) {
@@ -34,7 +34,6 @@ func (self *ISTORE_3) Execute(frame *rtda.Frame) {
 	_istore(frame, 3)
 }
 
-//公用函数
 func _istore(frame *rtda.Frame, index uint) {
 	val := frame.OperandStack().PopInt()
 	frame.LocalVars().SetInt(index, val)

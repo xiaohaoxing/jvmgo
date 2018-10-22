@@ -3,46 +3,46 @@ package math
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//double 类型的减法
+// Subtract double
 type DSUB struct{ base.NoOperandsInstruction }
 
 func (self *DSUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	var2 := stack.PopDouble()
-	var1 := stack.PopDouble()
-	result := var1 - var2
+	v2 := stack.PopDouble()
+	v1 := stack.PopDouble()
+	result := v1 - v2
 	stack.PushDouble(result)
 }
 
-//float 类型的减法
+// Subtract float
 type FSUB struct{ base.NoOperandsInstruction }
 
 func (self *FSUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	var2 := stack.PopFloat()
-	var1 := stack.PopFloat()
-	result := var1 - var2
+	v2 := stack.PopFloat()
+	v1 := stack.PopFloat()
+	result := v1 - v2
 	stack.PushFloat(result)
 }
 
-//int 类型的减法
+// Subtract int
 type ISUB struct{ base.NoOperandsInstruction }
 
 func (self *ISUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	var2 := stack.PopInt()
-	var1 := stack.PopInt()
-	result := var1 - var2
+	v2 := stack.PopInt()
+	v1 := stack.PopInt()
+	result := v1 - v2
 	stack.PushInt(result)
 }
 
-//long 类型的减法
+// Subtract long
 type LSUB struct{ base.NoOperandsInstruction }
 
 func (self *LSUB) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	var2 := stack.PopLong()
-	var1 := stack.PopLong()
-	result := var1 - var2
+	v2 := stack.PopLong()
+	v1 := stack.PopLong()
+	result := v1 - v2
 	stack.PushLong(result)
 }

@@ -1,25 +1,25 @@
 package stores
 
-import (
-	"jvmgo/ch08/instructions/base"
-	"jvmgo/ch08/rtda"
-	"jvmgo/ch08/rtda/heap"
-)
+import "jvmgo/ch08/instructions/base"
+import "jvmgo/ch08/rtda"
+import "jvmgo/ch08/rtda/heap"
 
+// Store into reference array
 type AASTORE struct{ base.NoOperandsInstruction }
 
 func (self *AASTORE) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	val := stack.PopRef()
+	ref := stack.PopRef()
 	index := stack.PopInt()
 	arrRef := stack.PopRef()
 
 	checkNotNil(arrRef)
 	refs := arrRef.Refs()
 	checkIndex(len(refs), index)
-	refs[index] = val
+	refs[index] = ref
 }
 
+// Store into byte or boolean array
 type BASTORE struct{ base.NoOperandsInstruction }
 
 func (self *BASTORE) Execute(frame *rtda.Frame) {
@@ -34,6 +34,7 @@ func (self *BASTORE) Execute(frame *rtda.Frame) {
 	bytes[index] = int8(val)
 }
 
+// Store into char array
 type CASTORE struct{ base.NoOperandsInstruction }
 
 func (self *CASTORE) Execute(frame *rtda.Frame) {
@@ -48,6 +49,7 @@ func (self *CASTORE) Execute(frame *rtda.Frame) {
 	chars[index] = uint16(val)
 }
 
+// Store into double array
 type DASTORE struct{ base.NoOperandsInstruction }
 
 func (self *DASTORE) Execute(frame *rtda.Frame) {
@@ -62,6 +64,7 @@ func (self *DASTORE) Execute(frame *rtda.Frame) {
 	doubles[index] = float64(val)
 }
 
+// Store into float array
 type FASTORE struct{ base.NoOperandsInstruction }
 
 func (self *FASTORE) Execute(frame *rtda.Frame) {
@@ -76,6 +79,7 @@ func (self *FASTORE) Execute(frame *rtda.Frame) {
 	floats[index] = float32(val)
 }
 
+// Store into int array
 type IASTORE struct{ base.NoOperandsInstruction }
 
 func (self *IASTORE) Execute(frame *rtda.Frame) {
@@ -90,6 +94,7 @@ func (self *IASTORE) Execute(frame *rtda.Frame) {
 	ints[index] = int32(val)
 }
 
+// Store into long array
 type LASTORE struct{ base.NoOperandsInstruction }
 
 func (self *LASTORE) Execute(frame *rtda.Frame) {
@@ -104,6 +109,7 @@ func (self *LASTORE) Execute(frame *rtda.Frame) {
 	longs[index] = int64(val)
 }
 
+// Store into short array
 type SASTORE struct{ base.NoOperandsInstruction }
 
 func (self *SASTORE) Execute(frame *rtda.Frame) {

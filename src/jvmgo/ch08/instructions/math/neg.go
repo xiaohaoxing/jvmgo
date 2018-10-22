@@ -3,7 +3,7 @@ package math
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//double 的取反
+// Negate double
 type DNEG struct{ base.NoOperandsInstruction }
 
 func (self *DNEG) Execute(frame *rtda.Frame) {
@@ -12,7 +12,7 @@ func (self *DNEG) Execute(frame *rtda.Frame) {
 	stack.PushDouble(-val)
 }
 
-//float 的取反
+// Negate float
 type FNEG struct{ base.NoOperandsInstruction }
 
 func (self *FNEG) Execute(frame *rtda.Frame) {
@@ -21,7 +21,7 @@ func (self *FNEG) Execute(frame *rtda.Frame) {
 	stack.PushFloat(-val)
 }
 
-//int 的取反
+// Negate int
 type INEG struct{ base.NoOperandsInstruction }
 
 func (self *INEG) Execute(frame *rtda.Frame) {
@@ -30,7 +30,7 @@ func (self *INEG) Execute(frame *rtda.Frame) {
 	stack.PushInt(-val)
 }
 
-//long 的取反
+// Negate long
 type LNEG struct{ base.NoOperandsInstruction }
 
 func (self *LNEG) Execute(frame *rtda.Frame) {

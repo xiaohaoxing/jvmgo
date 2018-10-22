@@ -3,7 +3,7 @@ package stack
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//交换栈顶2个变量的指令
+// Swap the top two operand stack values
 type SWAP struct{ base.NoOperandsInstruction }
 
 func (self *SWAP) Execute(frame *rtda.Frame) {

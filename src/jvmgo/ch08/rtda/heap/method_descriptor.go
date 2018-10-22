@@ -12,5 +12,6 @@ func (self *MethodDescriptor) addParameterType(t string) {
 		copy(s, self.parameterTypes)
 		self.parameterTypes = s
 	}
+
 	self.parameterTypes = append(self.parameterTypes, t)
 }

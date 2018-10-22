@@ -1,15 +1,20 @@
 package heap
 
-import (
-	"fmt"
-	"jvmgo/ch08/classfile"
-	"jvmgo/ch08/classpath"
-)
+import "fmt"
+import "jvmgo/ch08/classfile"
+import "jvmgo/ch08/classpath"
 
+/*
+class names:
+    - primitive types: boolean, byte, int ...
+    - primitive arrays: [Z, [B, [I ...
+    - non-array classes: java/lang/Object ...
+    - array classes: [Ljava/lang/Object; ...
+*/
 type ClassLoader struct {
 	cp          *classpath.Classpath
 	verboseFlag bool
-	classMap    map[string]*Class //加载了的类
+	classMap    map[string]*Class // loaded classes
 }
 
 func NewClassLoader(cp *classpath.Classpath, verboseFlag bool) *ClassLoader {
@@ -22,18 +27,21 @@ func NewClassLoader(cp *classpath.Classpath, verboseFlag bool) *ClassLoader {
 
 func (self *ClassLoader) LoadClass(name string) *Class {
 	if class, ok := self.classMap[name]; ok {
-		return class //已经加载了
+		// already loaded
+		return class
 	}
+
 	if name[0] == '[' {
+		// array class
 		return self.loadArrayClass(name)
 	}
-	return self.loadNonArrayClass(name) //调用非数组类
+
+	return self.loadNonArrayClass(name)
 }
 
-//加载一个数组类
 func (self *ClassLoader) loadArrayClass(name string) *Class {
 	class := &Class{
-		accessFlags: ACC_PUBLIC, // TODO
+		accessFlags: ACC_PUBLIC, // todo
 		name:        name,
 		loader:      self,
 		initStarted: true,
@@ -48,19 +56,17 @@ func (self *ClassLoader) loadArrayClass(name string) *Class {
 }
 
 func (self *ClassLoader) loadNonArrayClass(name string) *Class {
-	//1. 找到 class 文件并把数据读取到内存
 	data, entry := self.readClass(name)
-	//2. 解析 class 文件，生成类数据并放入方法区
 	class := self.defineClass(data)
-	//3. 链接
 	link(class)
+
 	if self.verboseFlag {
 		fmt.Printf("[Loaded %s from %s]\n", name, entry)
 	}
+
 	return class
 }
 
-//1. 读取 class 文件
 func (self *ClassLoader) readClass(name string) ([]byte, classpath.Entry) {
 	data, entry, err := self.cp.ReadClass(name)
 	if err != nil {
@@ -69,24 +75,26 @@ func (self *ClassLoader) readClass(name string) ([]byte, classpath.Entry) {
 	return data, entry
 }
 
-//2. 解析 class 文件
+// jvms 5.3.5
 func (self *ClassLoader) defineClass(data []byte) *Class {
 	class := parseClass(data)
 	class.loader = self
-	resolveSuperClass(class) //加载父类
-	resolveInterfaces(class) //加载接口
+	resolveSuperClass(class)
+	resolveInterfaces(class)
 	self.classMap[class.name] = class
 	return class
 }
+
 func parseClass(data []byte) *Class {
 	cf, err := classfile.Parse(data)
 	if err != nil {
-		panic("java.lang.ClassFormatError")
+		//panic("java.lang.ClassFormatError")
+		panic(err)
 	}
 	return newClass(cf)
 }
 
-//递归加载父类和接口
+// jvms 5.4.3.1
 func resolveSuperClass(class *Class) {
 	if class.name != "java/lang/Object" {
 		class.superClass = class.loader.LoadClass(class.superClassName)
@@ -102,22 +110,22 @@ func resolveInterfaces(class *Class) {
 	}
 }
 
-//3. 链接类
 func link(class *Class) {
-	verify(class)  //验证
-	prepare(class) //准备
+	verify(class)
+	prepare(class)
 }
 
 func verify(class *Class) {
-	//为了确保安全性，这里要对 java 类严格的验证。这里略过了。
+	// todo
 }
+
+// jvms 5.4.2
 func prepare(class *Class) {
 	calcInstanceFieldSlotIds(class)
 	calcStaticFieldSlotIds(class)
 	allocAndInitStaticVars(class)
 }
 
-//计算对象的个数，并给他们编号
 func calcInstanceFieldSlotIds(class *Class) {
 	slotId := uint(0)
 	if class.superClass != nil {
@@ -135,12 +143,6 @@ func calcInstanceFieldSlotIds(class *Class) {
 	class.instanceSlotCount = slotId
 }
 
-//是否是 long 或 double，以便占2个位置
-func (self *Field) isLongOrDouble() bool {
-	return self.descriptor == "J" || self.descriptor == "D"
-}
-
-//计算静态成员的个数并给他们编号
 func calcStaticFieldSlotIds(class *Class) {
 	slotId := uint(0)
 	for _, field := range class.fields {
@@ -169,21 +171,22 @@ func initStaticFinalVar(class *Class, field *Field) {
 	cp := class.constantPool
 	cpIndex := field.ConstValueIndex()
 	slotId := field.SlotId()
+
 	if cpIndex > 0 {
 		switch field.Descriptor() {
-		case "Z", "B", "C", "S", "I": //占一格的,byte,char,short,int
+		case "Z", "B", "C", "S", "I":
 			val := cp.GetConstant(cpIndex).(int32)
 			vars.SetInt(slotId, val)
-		case "J": //long 类型
+		case "J":
 			val := cp.GetConstant(cpIndex).(int64)
 			vars.SetLong(slotId, val)
-		case "F": //float 类型
+		case "F":
 			val := cp.GetConstant(cpIndex).(float32)
 			vars.SetFloat(slotId, val)
-		case "D": //double 类型
+		case "D":
 			val := cp.GetConstant(cpIndex).(float64)
 			vars.SetDouble(slotId, val)
-		case "Ljava/lang/String": //字符串常量
+		case "Ljava/lang/String;":
 			goStr := cp.GetConstant(cpIndex).(string)
 			jStr := JString(class.Loader(), goStr)
 			vars.SetRef(slotId, jStr)

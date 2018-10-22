@@ -3,24 +3,24 @@ package math
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//int 类型的或运算
+// Boolean OR int
 type IOR struct{ base.NoOperandsInstruction }
 
 func (self *IOR) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	var2 := stack.PopInt()
-	var1 := stack.PopInt()
-	result := var1 | var2
+	v2 := stack.PopInt()
+	v1 := stack.PopInt()
+	result := v1 | v2
 	stack.PushInt(result)
 }
 
-//long 类型的或运算
+// Boolean OR long
 type LOR struct{ base.NoOperandsInstruction }
 
 func (self *LOR) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	var2 := stack.PopLong()
-	var1 := stack.PopLong()
-	result := var1 | var2
+	v2 := stack.PopLong()
+	v1 := stack.PopLong()
+	result := v1 | v2
 	stack.PushLong(result)
 }

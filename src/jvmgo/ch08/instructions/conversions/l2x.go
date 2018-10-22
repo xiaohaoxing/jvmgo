@@ -3,7 +3,7 @@ package conversions
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//long->double
+// Convert long to double
 type L2D struct{ base.NoOperandsInstruction }
 
 func (self *L2D) Execute(frame *rtda.Frame) {
@@ -13,7 +13,7 @@ func (self *L2D) Execute(frame *rtda.Frame) {
 	stack.PushDouble(d)
 }
 
-//long->float
+// Convert long to float
 type L2F struct{ base.NoOperandsInstruction }
 
 func (self *L2F) Execute(frame *rtda.Frame) {
@@ -23,7 +23,7 @@ func (self *L2F) Execute(frame *rtda.Frame) {
 	stack.PushFloat(f)
 }
 
-//long->int
+// Convert long to int
 type L2I struct{ base.NoOperandsInstruction }
 
 func (self *L2I) Execute(frame *rtda.Frame) {

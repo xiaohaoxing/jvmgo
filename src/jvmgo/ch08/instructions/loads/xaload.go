@@ -1,11 +1,10 @@
 package loads
 
-import (
-	"jvmgo/ch08/instructions/base"
-	"jvmgo/ch08/rtda"
-	"jvmgo/ch08/rtda/heap"
-)
+import "jvmgo/ch08/instructions/base"
+import "jvmgo/ch08/rtda"
+import "jvmgo/ch08/rtda/heap"
 
+// Load reference from array
 type AALOAD struct{ base.NoOperandsInstruction }
 
 func (self *AALOAD) Execute(frame *rtda.Frame) {
@@ -19,6 +18,7 @@ func (self *AALOAD) Execute(frame *rtda.Frame) {
 	stack.PushRef(refs[index])
 }
 
+// Load byte or boolean from array
 type BALOAD struct{ base.NoOperandsInstruction }
 
 func (self *BALOAD) Execute(frame *rtda.Frame) {
@@ -32,6 +32,7 @@ func (self *BALOAD) Execute(frame *rtda.Frame) {
 	stack.PushInt(int32(bytes[index]))
 }
 
+// Load char from array
 type CALOAD struct{ base.NoOperandsInstruction }
 
 func (self *CALOAD) Execute(frame *rtda.Frame) {
@@ -45,6 +46,7 @@ func (self *CALOAD) Execute(frame *rtda.Frame) {
 	stack.PushInt(int32(chars[index]))
 }
 
+// Load double from array
 type DALOAD struct{ base.NoOperandsInstruction }
 
 func (self *DALOAD) Execute(frame *rtda.Frame) {
@@ -58,6 +60,7 @@ func (self *DALOAD) Execute(frame *rtda.Frame) {
 	stack.PushDouble(doubles[index])
 }
 
+// Load float from array
 type FALOAD struct{ base.NoOperandsInstruction }
 
 func (self *FALOAD) Execute(frame *rtda.Frame) {
@@ -71,6 +74,7 @@ func (self *FALOAD) Execute(frame *rtda.Frame) {
 	stack.PushFloat(floats[index])
 }
 
+// Load int from array
 type IALOAD struct{ base.NoOperandsInstruction }
 
 func (self *IALOAD) Execute(frame *rtda.Frame) {
@@ -84,6 +88,7 @@ func (self *IALOAD) Execute(frame *rtda.Frame) {
 	stack.PushInt(ints[index])
 }
 
+// Load long from array
 type LALOAD struct{ base.NoOperandsInstruction }
 
 func (self *LALOAD) Execute(frame *rtda.Frame) {
@@ -97,6 +102,7 @@ func (self *LALOAD) Execute(frame *rtda.Frame) {
 	stack.PushLong(longs[index])
 }
 
+// Load short from array
 type SALOAD struct{ base.NoOperandsInstruction }
 
 func (self *SALOAD) Execute(frame *rtda.Frame) {

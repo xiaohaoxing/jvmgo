@@ -10,27 +10,27 @@ type ConstantPool struct {
 	consts []Constant
 }
 
-//逐个常量写入常量池中
 func newConstantPool(class *Class, cfCp classfile.ConstantPool) *ConstantPool {
 	cpCount := len(cfCp)
 	consts := make([]Constant, cpCount)
 	rtCp := &ConstantPool{class, consts}
+
 	for i := 1; i < cpCount; i++ {
 		cpInfo := cfCp[i]
 		switch cpInfo.(type) {
 		case *classfile.ConstantIntegerInfo:
 			intInfo := cpInfo.(*classfile.ConstantIntegerInfo)
-			consts[i] = intInfo.Value() //int32
+			consts[i] = intInfo.Value()
 		case *classfile.ConstantFloatInfo:
 			floatInfo := cpInfo.(*classfile.ConstantFloatInfo)
 			consts[i] = floatInfo.Value()
-		case *classfile.ConstantDoubleInfo:
-			doubleInfo := cpInfo.(*classfile.ConstantDoubleInfo)
-			consts[i] = doubleInfo.Value() //float64
-			i++
 		case *classfile.ConstantLongInfo:
 			longInfo := cpInfo.(*classfile.ConstantLongInfo)
 			consts[i] = longInfo.Value()
+			i++
+		case *classfile.ConstantDoubleInfo:
+			doubleInfo := cpInfo.(*classfile.ConstantDoubleInfo)
+			consts[i] = doubleInfo.Value()
 			i++
 		case *classfile.ConstantStringInfo:
 			stringInfo := cpInfo.(*classfile.ConstantStringInfo)
@@ -45,17 +45,19 @@ func newConstantPool(class *Class, cfCp classfile.ConstantPool) *ConstantPool {
 			methodrefInfo := cpInfo.(*classfile.ConstantMethodrefInfo)
 			consts[i] = newMethodRef(rtCp, methodrefInfo)
 		case *classfile.ConstantInterfaceMethodrefInfo:
-			interfaceMethodrefInfo := cpInfo.(*classfile.ConstantInterfaceMethodrefInfo)
-			consts[i] = newInterfaceMethodRef(rtCp, interfaceMethodrefInfo)
+			methodrefInfo := cpInfo.(*classfile.ConstantInterfaceMethodrefInfo)
+			consts[i] = newInterfaceMethodRef(rtCp, methodrefInfo)
+		default:
+			// todo
 		}
 	}
+
 	return rtCp
 }
 
-//获取常量池中指定 index 的常量
 func (self *ConstantPool) GetConstant(index uint) Constant {
 	if c := self.consts[index]; c != nil {
 		return c
 	}
-	panic(fmt.Sprintf("No constant at index: %d", index))
+	panic(fmt.Sprintf("No constants at index %d", index))
 }

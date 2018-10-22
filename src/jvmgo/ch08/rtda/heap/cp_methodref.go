@@ -14,18 +14,6 @@ func newMethodRef(cp *ConstantPool, refInfo *classfile.ConstantMethodrefInfo) *M
 	return ref
 }
 
-func (self *MethodRef) Code() []byte {
-	return self.method.Code()
-}
-
-func (self *MethodRef) Descriptor() string {
-	return self.method.Descriptor()
-}
-
-func (self *MethodRef) Name() string {
-	return self.method.Name()
-}
-
 func (self *MethodRef) ResolvedMethod() *Method {
 	if self.method == nil {
 		self.resolveMethodRef()
@@ -33,20 +21,22 @@ func (self *MethodRef) ResolvedMethod() *Method {
 	return self.method
 }
 
+// jvms8 5.4.3.3
 func (self *MethodRef) resolveMethodRef() {
-	//想通过方法符号引用访问 C 的一个方法，如果是接口则异常。
-	c := self.cp.class
-	class := self.ResolvedClass()
-	if class.IsInterface() {
+	d := self.cp.class
+	c := self.ResolvedClass()
+	if c.IsInterface() {
 		panic("java.lang.IncompatibleClassChangeError")
 	}
-	method := lookupMethod(class, self.name, self.descriptor)
+
+	method := lookupMethod(c, self.name, self.descriptor)
 	if method == nil {
 		panic("java.lang.NoSuchMethodError")
 	}
-	if !method.isAccessibleTo(c) {
+	if !method.isAccessibleTo(d) {
 		panic("java.lang.IllegalAccessError")
 	}
+
 	self.method = method
 }
 

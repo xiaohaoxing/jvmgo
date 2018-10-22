@@ -3,10 +3,7 @@ package loads
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-/*
-从局部变量表（LocalVars）加载到栈顶（stack.push）
-*/
-//load float from local variables
+// Load float from local variable
 type FLOAD struct{ base.Index8Instruction }
 
 func (self *FLOAD) Execute(frame *rtda.Frame) {
@@ -37,7 +34,6 @@ func (self *FLOAD_3) Execute(frame *rtda.Frame) {
 	_fload(frame, 3)
 }
 
-//公用代码
 func _fload(frame *rtda.Frame, index uint) {
 	val := frame.LocalVars().GetFloat(index)
 	frame.OperandStack().PushFloat(val)

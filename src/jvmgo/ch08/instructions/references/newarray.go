@@ -1,14 +1,13 @@
 package references
 
-import (
-	"jvmgo/ch08/instructions/base"
-	"jvmgo/ch08/rtda"
-	"jvmgo/ch08/rtda/heap"
-)
+import "jvmgo/ch08/instructions/base"
+import "jvmgo/ch08/rtda"
+import "jvmgo/ch08/rtda/heap"
 
 const (
+	//Array Type  atype
 	AT_BOOLEAN = 4
-	AT_CHAT    = 5
+	AT_CHAR    = 5
 	AT_FLOAT   = 6
 	AT_DOUBLE  = 7
 	AT_BYTE    = 8
@@ -17,6 +16,7 @@ const (
 	AT_LONG    = 11
 )
 
+// Create new array
 type NEW_ARRAY struct {
 	atype uint8
 }
@@ -24,7 +24,6 @@ type NEW_ARRAY struct {
 func (self *NEW_ARRAY) FetchOperands(reader *base.BytecodeReader) {
 	self.atype = reader.ReadUint8()
 }
-
 func (self *NEW_ARRAY) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	count := stack.PopInt()
@@ -44,7 +43,7 @@ func getPrimitiveArrayClass(loader *heap.ClassLoader, atype uint8) *heap.Class {
 		return loader.LoadClass("[Z")
 	case AT_BYTE:
 		return loader.LoadClass("[B")
-	case AT_CHAT:
+	case AT_CHAR:
 		return loader.LoadClass("[C")
 	case AT_SHORT:
 		return loader.LoadClass("[S")

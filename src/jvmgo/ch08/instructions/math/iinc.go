@@ -3,7 +3,7 @@ package math
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//给局部变量表中一个变量增加一个常量值。
+// Increment local variable by constant
 type IINC struct {
 	Index uint
 	Const int32

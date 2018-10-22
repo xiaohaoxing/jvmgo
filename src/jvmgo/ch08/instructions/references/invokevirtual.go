@@ -1,12 +1,11 @@
 package references
 
-import (
-	"fmt"
-	"jvmgo/ch08/instructions/base"
-	"jvmgo/ch08/rtda"
-	"jvmgo/ch08/rtda/heap"
-)
+import "fmt"
+import "jvmgo/ch08/instructions/base"
+import "jvmgo/ch08/rtda"
+import "jvmgo/ch08/rtda/heap"
 
+// Invoke instance method; dispatch based on class
 type INVOKE_VIRTUAL struct{ base.Index16Instruction }
 
 func (self *INVOKE_VIRTUAL) Execute(frame *rtda.Frame) {
@@ -17,54 +16,52 @@ func (self *INVOKE_VIRTUAL) Execute(frame *rtda.Frame) {
 	if resolvedMethod.IsStatic() {
 		panic("java.lang.IncompatibleClassChangeError")
 	}
+
 	ref := frame.OperandStack().GetRefFromTop(resolvedMethod.ArgSlotCount() - 1)
 	if ref == nil {
-		// 对 System.out.println()做处理
+		// hack!
 		if methodRef.Name() == "println" {
 			_println(frame.OperandStack(), methodRef.Descriptor())
 			return
 		}
+
 		panic("java.lang.NullPointerException")
 	}
 
-	// protected 的函数的调用限制：同一个包的子类
 	if resolvedMethod.IsProtected() &&
-		resolvedMethod.Class().IsSubClassOf(currentClass) &&
+		resolvedMethod.Class().IsSuperClassOf(currentClass) &&
 		resolvedMethod.Class().GetPackageName() != currentClass.GetPackageName() &&
 		ref.Class() != currentClass &&
 		!ref.Class().IsSubClassOf(currentClass) {
+
 		panic("java.lang.IllegalAccessError")
 	}
 
-	methodToBeInvoked := heap.LookupMethodInClass(ref.Class(), methodRef.Name(), methodRef.Descriptor())
+	methodToBeInvoked := heap.LookupMethodInClass(ref.Class(),
+		methodRef.Name(), methodRef.Descriptor())
 	if methodToBeInvoked == nil || methodToBeInvoked.IsAbstract() {
 		panic("java.lang.AbstractMethodError")
 	}
 
 	base.InvokeMethod(frame, methodToBeInvoked)
-
 }
 
+// hack!
 func _println(stack *rtda.OperandStack, descriptor string) {
 	switch descriptor {
 	case "(Z)V":
-		fmt.Printf("%V\n", stack.PopInt() != 0)
+		fmt.Printf("%v\n", stack.PopInt() != 0)
 	case "(C)V":
 		fmt.Printf("%c\n", stack.PopInt())
-	case "(B)V":
+	case "(I)V", "(B)V", "(S)V":
 		fmt.Printf("%v\n", stack.PopInt())
-	case "(S)V":
-		fmt.Printf("%v\n", stack.PopInt())
-	case "(I)V":
-		fmt.Printf("%v\n", stack.PopInt())
-	case "(J)V":
-		fmt.Printf("%v\n", stack.PopLong())
 	case "(F)V":
 		fmt.Printf("%v\n", stack.PopFloat())
+	case "(J)V":
+		fmt.Printf("%v\n", stack.PopLong())
 	case "(D)V":
 		fmt.Printf("%v\n", stack.PopDouble())
 	case "(Ljava/lang/String;)V":
-		// TODO hack！还不是用的本地方法
 		jStr := stack.PopRef()
 		goStr := heap.GoString(jStr)
 		fmt.Println(goStr)

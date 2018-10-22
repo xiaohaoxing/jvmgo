@@ -3,34 +3,33 @@ package math
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//int <<
+// Shift left int
 type ISHL struct{ base.NoOperandsInstruction }
 
 func (self *ISHL) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopInt()
 	v1 := stack.PopInt()
-	s := uint32(v2) & 0x1f //需要前5比特，而且类型转换
-	result := v1 << s      //s是需要位移的位数
+	s := uint32(v2) & 0x1f
+	result := v1 << s
 	stack.PushInt(result)
 }
 
-//int >>
+// Arithmetic shift right int
 type ISHR struct{ base.NoOperandsInstruction }
 
 func (self *ISHR) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopInt()
-	v1 := stack.PopLong()
-	s := uint32(v2) & 0x3f
+	v1 := stack.PopInt()
+	s := uint32(v2) & 0x1f
 	result := v1 >> s
-	stack.PushLong(result)
+	stack.PushInt(result)
 }
 
-//int >>>
+// Logical shift right int
 type IUSHR struct{ base.NoOperandsInstruction }
 
-//go 没有>>>，因此转换成无符号整数，位操作，再转为有符号整数
 func (self *IUSHR) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
 	v2 := stack.PopInt()
@@ -40,7 +39,7 @@ func (self *IUSHR) Execute(frame *rtda.Frame) {
 	stack.PushInt(result)
 }
 
-//long <<
+// Shift left long
 type LSHL struct{ base.NoOperandsInstruction }
 
 func (self *LSHL) Execute(frame *rtda.Frame) {
@@ -52,7 +51,7 @@ func (self *LSHL) Execute(frame *rtda.Frame) {
 	stack.PushLong(result)
 }
 
-//long >>
+// Arithmetic shift right long
 type LSHR struct{ base.NoOperandsInstruction }
 
 func (self *LSHR) Execute(frame *rtda.Frame) {
@@ -64,7 +63,7 @@ func (self *LSHR) Execute(frame *rtda.Frame) {
 	stack.PushLong(result)
 }
 
-//long >>>
+// Logical shift right long
 type LUSHR struct{ base.NoOperandsInstruction }
 
 func (self *LUSHR) Execute(frame *rtda.Frame) {

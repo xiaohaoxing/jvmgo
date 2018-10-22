@@ -1,13 +1,10 @@
 package references
 
-import (
-	"jvmgo/ch08/instructions/base"
-	"jvmgo/ch08/rtda"
-	"jvmgo/ch08/rtda/heap"
-)
+import "jvmgo/ch08/instructions/base"
+import "jvmgo/ch08/rtda"
+import "jvmgo/ch08/rtda/heap"
 
-//GET_STATIC指令
-//根据常量池索引去找该静态成员的值，推入栈顶
+// Get static field from class
 type GET_STATIC struct{ base.Index16Instruction }
 
 func (self *GET_STATIC) Execute(frame *rtda.Frame) {
@@ -20,18 +17,18 @@ func (self *GET_STATIC) Execute(frame *rtda.Frame) {
 		base.InitClass(frame.Thread(), class)
 		return
 	}
-	//非静态成员不能通过类访问！
+
 	if !field.IsStatic() {
-		panic("java.lang.IncompatibleClassChangeError!")
+		panic("java.lang.IncompatibleClassChangeError")
 	}
-	//读取的时候不需要管是不是 final 的了
+
 	descriptor := field.Descriptor()
 	slotId := field.SlotId()
 	slots := class.StaticVars()
 	stack := frame.OperandStack()
 
 	switch descriptor[0] {
-	case 'Z', 'C', 'B', 'I', 'S':
+	case 'Z', 'B', 'C', 'S', 'I':
 		stack.PushInt(slots.GetInt(slotId))
 	case 'F':
 		stack.PushFloat(slots.GetFloat(slotId))
@@ -39,7 +36,9 @@ func (self *GET_STATIC) Execute(frame *rtda.Frame) {
 		stack.PushLong(slots.GetLong(slotId))
 	case 'D':
 		stack.PushDouble(slots.GetDouble(slotId))
-	case 'L':
+	case 'L', '[':
 		stack.PushRef(slots.GetRef(slotId))
+	default:
+		// todo
 	}
 }

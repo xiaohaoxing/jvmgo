@@ -1,13 +1,10 @@
 package references
 
-import (
-	"jvmgo/ch08/instructions/base"
-	"jvmgo/ch08/rtda"
-)
+import "jvmgo/ch08/instructions/base"
+import "jvmgo/ch08/rtda"
 
-type ARRAY_LENGTH struct {
-	base.NoOperandsInstruction
-}
+// Get length of array
+type ARRAY_LENGTH struct{ base.NoOperandsInstruction }
 
 func (self *ARRAY_LENGTH) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()

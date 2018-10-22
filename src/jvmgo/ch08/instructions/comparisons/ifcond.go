@@ -3,6 +3,7 @@ package comparisons
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
+// Branch if int comparison with zero succeeds
 type IFEQ struct{ base.BranchInstruction }
 
 func (self *IFEQ) Execute(frame *rtda.Frame) {

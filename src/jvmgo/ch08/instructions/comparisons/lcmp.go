@@ -3,6 +3,7 @@ package comparisons
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
+// Compare long
 type LCMP struct{ base.NoOperandsInstruction }
 
 func (self *LCMP) Execute(frame *rtda.Frame) {

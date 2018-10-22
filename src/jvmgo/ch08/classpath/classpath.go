@@ -56,6 +56,8 @@ func (self *Classpath) parseUserClasspath(cpOption string) {
 	}
 	self.userClasspath = newEntry(cpOption)
 }
+
+// className: fully/qualified/ClassName
 func (self *Classpath) ReadClass(className string) ([]byte, Entry, error) {
 	className = className + ".class"
 	if data, entry, err := self.bootClasspath.readClass(className); err == nil {
@@ -66,6 +68,7 @@ func (self *Classpath) ReadClass(className string) ([]byte, Entry, error) {
 	}
 	return self.userClasspath.readClass(className)
 }
+
 func (self *Classpath) String() string {
 	return self.userClasspath.String()
 }

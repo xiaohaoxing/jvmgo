@@ -3,91 +3,83 @@ package stack
 import "jvmgo/ch08/instructions/base"
 import "jvmgo/ch08/rtda"
 
-//复制栈顶变量的操作系列
+// Duplicate the top operand stack value
 type DUP struct{ base.NoOperandsInstruction }
-type DUP_X1 struct{ base.NoOperandsInstruction }
-type DUP_X2 struct{ base.NoOperandsInstruction }
-type DUP2 struct{ base.NoOperandsInstruction }
-type DUP2_X1 struct{ base.NoOperandsInstruction }
-type DUP2_X2 struct{ base.NoOperandsInstruction }
 
-//栈顶：c->b->a
-//
-//		c->b->a->a
 func (self *DUP) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	a := stack.PopSlot()
-	stack.PushSlot(a)
-	stack.PushSlot(a)
+	slot := stack.PopSlot()
+	stack.PushSlot(slot)
+	stack.PushSlot(slot)
 }
 
-//栈顶: c->b->a
-//
-//		c->b->a->b
+// Duplicate the top operand stack value and insert two values down
+type DUP_X1 struct{ base.NoOperandsInstruction }
+
 func (self *DUP_X1) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	a := stack.PopSlot()
-	b := stack.PopSlot()
-	stack.PushSlot(b)
-	stack.PushSlot(a)
-	stack.PushSlot(b)
+	slot1 := stack.PopSlot()
+	slot2 := stack.PopSlot()
+	stack.PushSlot(slot1)
+	stack.PushSlot(slot2)
+	stack.PushSlot(slot1)
 }
 
-//栈顶：c->b->a
-//
-//		c->b->a->c
+// Duplicate the top operand stack value and insert two or three values down
+type DUP_X2 struct{ base.NoOperandsInstruction }
+
 func (self *DUP_X2) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	a := stack.PopSlot()
-	b := stack.PopSlot()
-	c := stack.PopSlot()
-	stack.PushSlot(c)
-	stack.PushSlot(b)
-	stack.PushSlot(a)
-	stack.PushSlot(c)
+	slot1 := stack.PopSlot()
+	slot2 := stack.PopSlot()
+	slot3 := stack.PopSlot()
+	stack.PushSlot(slot1)
+	stack.PushSlot(slot3)
+	stack.PushSlot(slot2)
+	stack.PushSlot(slot1)
 }
 
-//c->b->a
-//复制2个变量，无间隔
-//c->b->a->b->a
+// Duplicate the top one or two operand stack values
+type DUP2 struct{ base.NoOperandsInstruction }
+
 func (self *DUP2) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	a := stack.PopSlot()
-	b := stack.PopSlot()
-	stack.PushSlot(b)
-	stack.PushSlot(a)
-	stack.PushSlot(b)
-	stack.PushSlot(a)
+	slot1 := stack.PopSlot()
+	slot2 := stack.PopSlot()
+	stack.PushSlot(slot2)
+	stack.PushSlot(slot1)
+	stack.PushSlot(slot2)
+	stack.PushSlot(slot1)
 }
 
-//c->b->a
-//
-//c->b->a->c->b
+// Duplicate the top one or two operand stack values and insert two or three values down
+type DUP2_X1 struct{ base.NoOperandsInstruction }
+
 func (self *DUP2_X1) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	a := stack.PopSlot()
-	b := stack.PopSlot()
-	c := stack.PopSlot()
-	stack.PushSlot(c)
-	stack.PushSlot(b)
-	stack.PushSlot(a)
-	stack.PushSlot(c)
-	stack.PushSlot(b)
+	slot1 := stack.PopSlot()
+	slot2 := stack.PopSlot()
+	slot3 := stack.PopSlot()
+	stack.PushSlot(slot2)
+	stack.PushSlot(slot1)
+	stack.PushSlot(slot3)
+	stack.PushSlot(slot2)
+	stack.PushSlot(slot1)
 }
 
-//d->c->b->a
-//
-//b->a->d->c->b->a
+// Duplicate the top one or two operand stack values and insert two, three, or four values down
+type DUP2_X2 struct{ base.NoOperandsInstruction }
+
 func (self *DUP2_X2) Execute(frame *rtda.Frame) {
 	stack := frame.OperandStack()
-	a := stack.PopSlot()
-	b := stack.PopSlot()
-	c := stack.PopSlot()
-	d := stack.PopSlot()
-	stack.PushSlot(b)
-	stack.PushSlot(a)
-	stack.PushSlot(d)
-	stack.PushSlot(c)
-	stack.PushSlot(b)
-	stack.PushSlot(a)
+	slot1 := stack.PopSlot()
+	slot2 := stack.PopSlot()
+	slot3 := stack.PopSlot()
+	slot4 := stack.PopSlot()
+	stack.PushSlot(slot2)
+	stack.PushSlot(slot1)
+	stack.PushSlot(slot4)
+	stack.PushSlot(slot3)
+	stack.PushSlot(slot2)
+	stack.PushSlot(slot1)
 }

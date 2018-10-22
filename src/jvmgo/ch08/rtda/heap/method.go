@@ -29,57 +29,6 @@ func (self *Method) copyAttributes(cfMethod *classfile.MemberInfo) {
 		self.code = codeAttr.Code()
 	}
 }
-func (self *Method) copyMemberInfo(cfMethod *classfile.MemberInfo) {
-	self.ClassMember.class = self.class
-	self.ClassMember.name = cfMethod.Name()
-	self.ClassMember.descriptor = cfMethod.Descriptor()
-	self.ClassMember.accessFlags = cfMethod.AccessFlags()
-}
-
-//getters
-func (self *Method) MaxStack() uint {
-	return self.maxStack
-}
-
-func (self *Method) MaxLocals() uint {
-	return self.maxLocals
-}
-
-func (self *Method) IsPublic() bool {
-	return 0 != self.ClassMember.AccessFlags()&ACC_PUBLIC
-}
-
-func (self *Method) IsFinal() bool {
-	return 0 != self.ClassMember.AccessFlags()&ACC_FINAL
-}
-
-func (self *Method) IsAbstract() bool {
-	return 0 != self.ClassMember.AccessFlags()&ACC_ABSTRACT
-}
-
-func (self *Method) IsSynthetic() bool {
-	return 0 != self.ClassMember.AccessFlags()&ACC_SYNTHETIC
-}
-
-func (self *Method) IsStatic() bool {
-	return 0 != self.ClassMember.AccessFlags()&ACC_STATIC
-}
-
-func (self *Method) IsNative() bool {
-	return 0 != self.ClassMember.AccessFlags()&ACC_NATIVE
-}
-
-func (self *Method) Code() []byte {
-	return self.code
-}
-
-func (self *Method) Descriptor() string {
-	return self.descriptor
-}
-
-func (self *Method) ArgSlotCount() uint {
-	return self.argSlotCount
-}
 
 func (self *Method) calcArgSlotCount() {
 	parsedDescriptor := parseMethodDescriptor(self.descriptor)
@@ -90,7 +39,39 @@ func (self *Method) calcArgSlotCount() {
 		}
 	}
 	if !self.IsStatic() {
-		self.argSlotCount++
+		self.argSlotCount++ // `this` reference
 	}
+}
 
+func (self *Method) IsSynchronized() bool {
+	return 0 != self.accessFlags&ACC_SYNCHRONIZED
+}
+func (self *Method) IsBridge() bool {
+	return 0 != self.accessFlags&ACC_BRIDGE
+}
+func (self *Method) IsVarargs() bool {
+	return 0 != self.accessFlags&ACC_VARARGS
+}
+func (self *Method) IsNative() bool {
+	return 0 != self.accessFlags&ACC_NATIVE
+}
+func (self *Method) IsAbstract() bool {
+	return 0 != self.accessFlags&ACC_ABSTRACT
+}
+func (self *Method) IsStrict() bool {
+	return 0 != self.accessFlags&ACC_STRICT
+}
+
+// getters
+func (self *Method) MaxStack() uint {
+	return self.maxStack
+}
+func (self *Method) MaxLocals() uint {
+	return self.maxLocals
+}
+func (self *Method) Code() []byte {
+	return self.code
+}
+func (self *Method) ArgSlotCount() uint {
+	return self.argSlotCount
 }
