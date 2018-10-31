@@ -74,7 +74,6 @@ func (self *OperandStack) PopRef() *heap.Object {
 	return ref
 }
 
-//Cha5新增操作栈函数
 func (self *OperandStack) PushSlot(slot Slot) {
 	self.slots[self.size] = slot
 	self.size++
