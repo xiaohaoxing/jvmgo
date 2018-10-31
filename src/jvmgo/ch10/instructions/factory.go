@@ -1,9 +1,18 @@
 package instructions
 
-import (
-	"fmt"
-	"jvmgo/ch10/instructions/base"
-)
+import "fmt"
+import "jvmgo/ch10/instructions/base"
+import . "jvmgo/ch10/instructions/comparisons"
+import . "jvmgo/ch10/instructions/constants"
+import . "jvmgo/ch10/instructions/control"
+import . "jvmgo/ch10/instructions/conversions"
+import . "jvmgo/ch10/instructions/extended"
+import . "jvmgo/ch10/instructions/loads"
+import . "jvmgo/ch10/instructions/math"
+import . "jvmgo/ch10/instructions/references"
+import . "jvmgo/ch10/instructions/reserved"
+import . "jvmgo/ch10/instructions/stack"
+import . "jvmgo/ch10/instructions/stores"
 
 //单例 singleton
 var (

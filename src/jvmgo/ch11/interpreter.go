@@ -11,14 +11,7 @@ import "jvmgo/ch11/rtda"
 //执行一个方法。按顺序读取attr，local 变量，操作数栈，方法的字节码。
 //初始化各个成员
 //循环执行字节码
-func interpret(method *heap.Method, logInst bool, args []string) {
-	thread := rtda.NewThread()
-	frame := thread.NewFrame(method)
-	thread.PushFrame(frame)
-	// 把命令行参数转化成 Java 字符串数组
-	jArgs := createArgsArray(method.Class().Loader(), args)
-	frame.LocalVars().SetRef(0, jArgs)
-
+func interpret(thread *rtda.Thread, logInst bool) {
 	defer catchErr(thread)
 	loop(thread, logInst)
 }

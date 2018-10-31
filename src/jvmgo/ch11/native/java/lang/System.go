@@ -8,6 +8,7 @@ import (
 
 func init() {
 	native.Register("java/lang/System", "arraycopy", "(Ljava/lang/Object;ILjava/lang/Object;II)V", arraycopy)
+	native.Register("java/lang/System", "setOut0", "(Ljava/io/PrintStream;)V", setOut0)
 }
 
 // 实现 public static native void arraycopy(Object src, int srcPos, Object dest, int destPos, int length)
@@ -46,4 +47,10 @@ func checkArrayCopy(src, dest *heap.Object) bool {
 		return srcClass == destClass
 	}
 	return true
+}
+
+func setOut0(frame *rtda.Frame) {
+	out := frame.LocalVars().GetRef(0)
+	sysClass := frame.Method().Class()
+	sysClass.SetRefVar("out", "Ljava/io/PrintStream;", out)
 }

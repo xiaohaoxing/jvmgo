@@ -19,12 +19,12 @@ func (self *INVOKE_VIRTUAL) Execute(frame *rtda.Frame) {
 	}
 	ref := frame.OperandStack().GetRefFromTop(resolvedMethod.ArgSlotCount() - 1)
 	if ref == nil {
-		// 对 System.out.println()做处理
-		// hack 方法
-		if methodRef.Name() == "println" {
-			_println(frame.OperandStack(), methodRef.Descriptor())
-			return
-		}
+		//// 对 System.out.println()做处理
+		//// hack 方法
+		//if methodRef.Name() == "println" {
+		//	_println(frame.OperandStack(), methodRef.Descriptor())
+		//	return
+		//}
 		panic("java.lang.NullPointerException")
 	}
 
